@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.264" height="24.612" viewBox="0 0 24.264 24.612">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="24.264" height="24.612" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Repetição_de_grade_3" data-name="Repetição de grade 3" clip-path="url(#clip-path)">
+    <g id="Grupo_1" data-name="Grupo 1" transform="translate(-737.172 494.612)">
+      <circle id="Elipse_2" data-name="Elipse 2" cx="3" cy="3" r="3" transform="translate(742 -476)" fill="#fff"/>
+      <circle id="Elipse_3" data-name="Elipse 3" cx="3" cy="3" r="3" transform="translate(753 -476)" fill="#fff"/>
+      <path id="Caminho_1" data-name="Caminho 1" d="M759-478.826H744.425l1.294-2.51h10.755l4.962-8.694v-2.154H742.695l-1.267-2.428h-4.255v2.428h2.35l3.768,9.071-1.474,2.811v2.723l1.474,1.084H759Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>
