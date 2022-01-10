@@ -173,235 +173,17 @@
                             </div>
                         </div>
                         <nav class="categorye-menus category-dropdown">
+
                             <ul class="categories-expand">
-                                <li class="categories-hover-right">
-                                    <a href="index-2.html#">Computer - Laptop <i
-                                            class="fa fa-angle-right float-right"></i></a>
-                                    <ul class="cat-submenu category-mega">
-                                        <li class="cat-mega-title"><a href="index-2.html#">Security Cameras</a>
-                                            <ul>
-                                                <li><a href="index-2.html#">DSLR Cameras</a></li>
-                                                <li><a href="index-2.html#">Lense Camera</a></li>
-                                                <li><a href="index-2.html#">Digital Cameras</a></li>
-                                                <li><a href="index-2.html#">Mirrorless Cameras</a></li>
-                                                <li><a href="index-2.html#">Point</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="cat-mega-title"><a href="index-2.html#">Mirrorless Cameras</a>
-                                            <ul>
-                                                <li><a href="index-2.html#">DSLR Cameras</a></li>
-                                                <li><a href="index-2.html#">Lense Camera</a></li>
-                                                <li><a href="index-2.html#">Digital Cameras</a></li>
-                                                <li><a href="index-2.html#">Mirrorless Cameras</a></li>
-                                                <li><a href="index-2.html#">Point</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="cat-mega-title"><a href="index-2.html#">Digital Cameras</a>
-                                            <ul>
-                                                <li><a href="index-2.html#">DSLR Cameras</a></li>
-                                                <li><a href="index-2.html#">Lense Camera</a></li>
-                                                <li><a href="index-2.html#">Digital Cameras</a></li>
-                                                <li><a href="index-2.html#">Mirrorless Cameras</a></li>
-                                                <li><a href="index-2.html#">Point</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="categories-hover-right">
-                                    <a href="index-2.html#">Electronics <i
-                                            class="fa fa-angle-right float-right"></i></a>
-                                    <ul class="cat-submenu category-mega">
-                                        <li class="cat-mega-title"><a href="index-2.html#">Security Cameras</a>
-                                            <ul>
-                                                <li><a href="index-2.html#">DSLR Cameras</a></li>
-                                                <li><a href="index-2.html#">Lense Camera</a></li>
-                                                <li><a href="index-2.html#">Digital Cameras</a></li>
-                                                <li><a href="index-2.html#">Mirrorless Cameras</a></li>
-                                                <li><a href="index-2.html#">Point</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="cat-mega-title"><a href="index-2.html#">Mirrorless Cameras</a>
-                                            <ul>
-                                                <li><a href="index-2.html#">DSLR Cameras</a></li>
-                                                <li><a href="index-2.html#">Lense Camera</a></li>
-                                                <li><a href="index-2.html#">Digital Cameras</a></li>
-                                                <li><a href="index-2.html#">Mirrorless Cameras</a></li>
-                                                <li><a href="index-2.html#">Point</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="cat-mega-title"><a href="index-2.html#">Digital Cameras</a>
-                                            <ul>
-                                                <li><a href="index-2.html#">DSLR Cameras</a></li>
-                                                <li><a href="index-2.html#">Lense Camera</a></li>
-                                                <li><a href="index-2.html#">Digital Cameras</a></li>
-                                                <li><a href="index-2.html#">Mirrorless Cameras</a></li>
-                                                <li><a href="index-2.html#">Point</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="categories-hover-right">
-                                    <a href="index-2.html#">Toys & Hobbies <i
-                                            class="fa fa-angle-right float-right"></i></a>
-                                    <ul class="cat-submenu category-mega">
-                                        <li class="cat-mega-title"><a href="index-2.html#">Security Cameras</a>
-                                            <ul>
-                                                <li><a href="index-2.html#">DSLR Cameras</a></li>
-                                                <li><a href="index-2.html#">Lense Camera</a></li>
-                                                <li><a href="index-2.html#">Digital Cameras</a></li>
-                                                <li><a href="index-2.html#">Mirrorless Cameras</a></li>
-                                                <li><a href="index-2.html#">Point</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="cat-mega-title"><a href="index-2.html#">Mirrorless Cameras</a>
-                                            <ul>
-                                                <li><a href="index-2.html#">DSLR Cameras</a></li>
-                                                <li><a href="index-2.html#">Lense Camera</a></li>
-                                                <li><a href="index-2.html#">Digital Cameras</a></li>
-                                                <li><a href="index-2.html#">Mirrorless Cameras</a></li>
-                                                <li><a href="index-2.html#">Point</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="cat-mega-title"><a href="index-2.html#">Digital Cameras</a>
-                                            <ul>
-                                                <li><a href="index-2.html#">DSLR Cameras</a></li>
-                                                <li><a href="index-2.html#">Lense Camera</a></li>
-                                                <li><a href="index-2.html#">Digital Cameras</a></li>
-                                                <li><a href="index-2.html#">Mirrorless Cameras</a></li>
-                                                <li><a href="index-2.html#">Point</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children active"><span class="menu-expand"><i
-                                            class="fa fa-angle-down"></i></span>
-                                    <a href="index-2.html#">Computer - Laptop</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item-has-children"><span class="menu-expand"><i
-                                                    class="fa fa-angle-down"></i></span>
-                                            <a href="index-2.html#">Men</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="shop.html">Shirt</a></li>
-                                                <li><a href="shop-fullwidth.html">Pant</a></li>
-                                                <li><a href="shop-fullwidth-list.html">Shoes</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children"><span class="menu-expand"><i
-                                                    class="fa fa-angle-down"></i></span>
-                                            <a href="index-2.html#">Women</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="shop.html">Shirt</a></li>
-                                                <li><a href="shop-fullwidth.html">Pant</a></li>
-                                                <li><a href="shop-fullwidth-list.html">Shoes</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children"><span class="menu-expand"><i
-                                                    class="fa fa-angle-down"></i></span>
-                                            <a href="index-2.html#">Kids</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="shop.html">Shirt</a></li>
-                                                <li><a href="shop-fullwidth.html">Pant</a></li>
-                                                <li><a href="shop-fullwidth-list.html">Shoes</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children"><span class="menu-expand"><i
-                                            class="fa fa-angle-down"></i></span>
-                                    <a href="index-2.html#">Electronics</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item-has-children"><span class="menu-expand"><i
-                                                    class="fa fa-angle-down"></i></span>
-                                            <a href="index-2.html#">Camera</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="shop.html">Cords & Cables</a></li>
-                                                <li><a href="shop-fullwidth.html">Wireless</a></li>
-                                                <li><a href="shop-fullwidth-list.html">Accessories</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children"><span class="menu-expand"><i
-                                                    class="fa fa-angle-down"></i></span>
-                                            <a href="index-2.html#">Cell Phone</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="shop.html">Cords & Cables</a></li>
-                                                <li><a href="shop-fullwidth.html">Wireless</a></li>
-                                                <li><a href="shop-fullwidth-list.html">Accessories</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children"><span class="menu-expand"><i
-                                                    class="fa fa-angle-down"></i></span>
-                                            <a href="index-2.html#">TV & Video</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="shop.html">Cords & Cables</a></li>
-                                                <li><a href="shop-fullwidth.html">Wireless</a></li>
-                                                <li><a href="shop-fullwidth-list.html">Accessories</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children"><span class="menu-expand"><i
-                                            class="fa fa-angle-down"></i></span>
-                                    <a href="index-2.html#">Toys & Hobbies</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item-has-children"><span class="menu-expand"><i
-                                                    class="fa fa-angle-down"></i></span>
-                                            <a href="index-2.html#">Camera</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="shop.html">Cords & Cables</a></li>
-                                                <li><a href="shop-fullwidth.html">Wireless</a></li>
-                                                <li><a href="shop-fullwidth-list.html">Accessories</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children"><span class="menu-expand"><i
-                                                    class="fa fa-angle-down"></i></span>
-                                            <a href="index-2.html#">Cell Phone</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="shop.html">Cords & Cables</a></li>
-                                                <li><a href="shop-fullwidth.html">Wireless</a></li>
-                                                <li><a href="shop-fullwidth-list.html">Accessories</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children"><span class="menu-expand"><i
-                                                    class="fa fa-angle-down"></i></span>
-                                            <a href="index-2.html#">TV & Video</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="shop.html">Cords & Cables</a></li>
-                                                <li><a href="shop-fullwidth.html">Wireless</a></li>
-                                                <li><a href="shop-fullwidth-list.html">Accessories</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
+                                @forelse ($departments as $item)
                                 <li>
-                                    <a href="index-2.html#">Sports & Outdoors</a>
+                                    <a href="#">{{$item->name}}</a>
                                 </li>
+                                @empty
                                 <li>
-                                    <a href="index-2.html#">Smarphone & Tablets</a>
+                                    Nenhum departamento cadastrado!
                                 </li>
-                                <li>
-                                    <a href="index-2.html#">Health & Beauty</a>
-                                </li>
-                                <li>
-                                    <a href="index-2.html#">Computers & Networking</a>
-                                </li>
-                                <li>
-                                    <a href="index-2.html#">Accessories</a>
-                                </li>
-                                <li>
-                                    <a href="index-2.html#">Jewelry & Watches</a>
-                                </li>
-                                <li>
-                                    <a href="index-2.html#">Flashlights & Lamps</a>
-                                </li>
-                                <li>
-                                    <a href="index-2.html#">Cameras & Photo</a>
-                                </li>
-                                <li class="category-item-parent hidden">
-                                    <a href="index-2.html#">Category-01</a>
-                                </li>
-                                <li class="category-item-parent">
-                                    <a href="index-2.html#" class="more-btn">More Category</a>
-                                </li>
+                                @endforelse
                             </ul>
                         </nav>
                     </div>
@@ -418,24 +200,11 @@
                             </div>
                             <nav class="main-menu">
                                 <ul>
+                                    @foreach ($menu as $item)
                                     <li>
-                                        <a href="">INFORMÁTICA</a>
+                                        <a href="#" style="text-transform: uppercase;">{{$item->name}}</a>
                                     </li>
-                                    <li>
-                                        <a href="shop.html">CELULARES</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop.html">ACESSÓRIOS</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop.html">AÚDIO</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop.html">TV E VÍDEO</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop.html">ELETRODOMÉSTICOS</a>
-                                    </li>
+                                    @endforeach
                                 </ul>
                             </nav>
                         </div>

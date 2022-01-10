@@ -47,7 +47,11 @@ class DepartmentController extends Controller
     public function store(DepartmentsRequest $request)
     {
 
-        $this->department->create($request->all());
+        $this->department->create([
+            'name' => $request->name,
+            'status' => $request->status,
+            'slug' => str_slug($request->status),
+        ]);
         return redirect()->back()->with('success', 'Cadastrado com sucesso!');
     }
 
@@ -57,9 +61,13 @@ class DepartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function search(Request $request)
     {
-        //
+        $request->validate([
+            'value' => 'required'
+        ]);
+        $data = $this->department->where('name', 'LIKE', '%' . $request->value . '%')->paginate();
+        return view('admin.pages.department.index', compact('data'));
     }
 
     /**
@@ -85,7 +93,11 @@ class DepartmentController extends Controller
     {
         $data = $this->department->find($id);
 
-        $data->update($request->all());
+        $data->update([
+            'name' => $request->name,
+            'status' => $request->status,
+            'slug' => str_slug($request->status),
+        ]);
         return redirect()->back()->with('success', 'Editado com sucesso!');
     }
 

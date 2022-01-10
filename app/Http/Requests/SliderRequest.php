@@ -24,7 +24,17 @@ class SliderRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'image_url' => 'required|mimes:jpeg,jpg,png',
+            'department_id' => 'required'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'image_url.required' => 'Escolha uma imagem!',
+            'image_url.mimes' => 'Formato de imagem inválido!',
+            'department_id.required' => 'Escolha um departamento!'
         ];
     }
 }

@@ -36,7 +36,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('product/delete/{id}', 'Admin\ProductController@destroy')->name('product.delete');
     Route::get('product/relatorios/', 'Admin\ProductController@report')->name('product.report');
     Route::get('product/search/', 'Admin\ProductController@search')->name('product.search');
-    
+
     // departments
     Route::get('departments/', 'Admin\DepartmentController@index')->name('department.index');
     Route::get('department/create/', 'Admin\DepartmentController@create')->name('department.create');
@@ -46,7 +46,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('department/delete/{id}', 'Admin\DepartmentController@destroy')->name('department.delete');
     Route::get('department/relatorios/', 'Admin\DepartmentController@report')->name('department.report');
     Route::get('department/search/', 'Admin\DepartmentController@search')->name('department.search');
+
+    // pedidos
+    Route::get('orders/', 'Admin\OrderController@index')->name('order.index');
+    Route::get('order/create/', 'Admin\OrderController@create')->name('order.create');
+    Route::post('order/store/', 'Admin\OrderController@store')->name('order.store');
+    Route::get('order/edit/{id}/', 'Admin\OrderController@edit')->name('order.edit');
+    Route::post('order/update/{id}', 'Admin\OrderController@update')->name('order.update');
+    Route::get('order/delete/{id}', 'Admin\OrderController@destroy')->name('order.delete');
+    Route::get('order/relatorios/', 'Admin\OrderController@report')->name('order.report');
+    Route::get('order/search/', 'Admin\OrderController@search')->name('order.search');
 });
 
 Auth::routes();
-

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Departments;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $departments = Departments::orderby('name', 'asc')->where('status', 'Ativo')->get();
+        $menu = Departments::orderby('name', 'asc')->where('status', 'Menu')->get();
+        view()->share([
+            'departments' => $departments,
+            'menu' => $menu
+        ]);
     }
 }

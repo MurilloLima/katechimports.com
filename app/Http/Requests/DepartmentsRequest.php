@@ -24,7 +24,14 @@ class DepartmentsRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required'
+            'name' => 'required|unique:departments',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Informe o nome do departamento',
         ];
     }
 }

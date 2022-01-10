@@ -82,6 +82,15 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="#"
+                        class="nav-link {{ $activePage == 'order.index' ? ' active' : '' }}">
+                        <i class="nav-icon fas fa-tasks"></i>
+                        <p>
+                            Pedidos
+                        </p>
+                    </a>
+                </li>
                 {{-- <li class="nav-item">
                     <a href="{{ route('demonstrative.report') }}"
                         class="nav-link {{ $activePage == 'demonstrative.report' ? ' active' : '' }}">

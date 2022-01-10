@@ -34,6 +34,7 @@
                                 <thead>
                                     <tr>
                                         <th>DEPARTAMENTO</th>
+                                        <th>STATUS</th>
                                         <th>DATA CADASTRO</th>
                                         <th>#</th>
                                     </tr>
@@ -42,6 +43,7 @@
                                     @forelse ($data as $item)
                                     <tr>
                                         <td>{{$item->name}}</td>
+                                        <td>{{$item->status}}</td>
                                         <td>{{date('d/m/Y', strtotime($item->created_at))}}</td>
                                         <td>
                                             <a href="{{ route('department.edit', ['id'=>$item->id]) }}"

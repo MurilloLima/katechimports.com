@@ -34,7 +34,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-        $departments = Departments::all();
+        $departments = Departments::pluck('name', 'id');
         return view('admin.pages.slider.create', compact('departments'));
     }
 
@@ -46,8 +46,13 @@ class SliderController extends Controller
      */
     public function store(SliderRequest $request)
     {
-       
-       
+        $data = $request->all();
+        if ($request->image->isValid()) {
+            $nameFile = Str::of($request->title)->slug('-') . '.' . $request->image->getclientoriginalextension();
+            $image = $request->image->storeAs('posts');
+            $data['image_url'] = $nameFile;
+        }
+        $this->slider->create($data);
         return redirect()->back()->with('success', 'Cadastrado com sucesso!');
     }
 
@@ -57,9 +62,13 @@ class SliderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function search(Request $request)
     {
-        //
+        $request->validate([
+            'value' => 'required'
+        ]);
+        $data = $this->slider->where('name', 'LIKE', '%' . $request->value . '%')->paginate();
+        return view('admin.pages.department.index', compact('data'));
     }
 
     /**
