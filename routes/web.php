@@ -24,15 +24,13 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('slider/edit/{id}/', 'Admin\SliderController@edit')->name('slider.edit');
     Route::post('slider/update/{id}', 'Admin\SliderController@update')->name('slider.update');
     Route::get('slider/delete/{id}', 'Admin\SliderController@destroy')->name('slider.delete');
-    Route::get('slider/relatorios/', 'Admin\SliderController@report')->name('slider.report');
-    Route::get('slider/search/', 'Admin\SliderController@search')->name('slider.search');
 
     //products
     Route::get('products/', 'Admin\ProductController@index')->name('product.index');
     Route::get('product/create/', 'Admin\ProductController@create')->name('product.create');
     Route::post('product/store/', 'Admin\ProductController@store')->name('product.store');
     Route::get('product/edit/{id}/', 'Admin\ProductController@edit')->name('product.edit');
-    Route::post('product/update/{id}', 'Admin\ProductController@update')->name('product.update');
+    Route::put('product/update/{id}', 'Admin\ProductController@update')->name('product.update');
     Route::get('product/delete/{id}', 'Admin\ProductController@destroy')->name('product.delete');
     Route::get('product/relatorios/', 'Admin\ProductController@report')->name('product.report');
     Route::get('product/search/', 'Admin\ProductController@search')->name('product.search');

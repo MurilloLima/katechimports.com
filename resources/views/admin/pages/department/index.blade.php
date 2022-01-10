@@ -1,5 +1,5 @@
-@extends('admin.layouts.app' ,['activePage' => 'product.index'])
-@section('title', 'Médicos')
+@extends('admin.layouts.app' ,['activePage' => 'department.index'])
+@section('title', 'Departamentos')
 @section('content')
 <div class="content-wrapper">
     <div class="content">

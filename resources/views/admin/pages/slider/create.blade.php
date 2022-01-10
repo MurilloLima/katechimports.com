@@ -12,6 +12,7 @@
                     <div class="card card-default">
                         <div class="card-body">
                             {!! Form::open(['route'=>'slider.store', 'files' => true]) !!}
+                            @method('POST')
                             @include('admin.pages.slider.forms.form')
                             <button type="submit" class="btn btn-block btn-default">Cadastrar</button>
                             {!! Form::close() !!}

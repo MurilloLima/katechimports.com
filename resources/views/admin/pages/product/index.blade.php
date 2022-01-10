@@ -1,5 +1,5 @@
-@extends('admin.layouts.app' ,['activePage' => 'slider.index'])
-@section('title', 'Slider')
+@extends('admin.layouts.app' ,['activePage' => 'product.index'])
+@section('title', 'Produtos')
 @section('content')
 <div class="content-wrapper">
     <div class="content">
@@ -9,8 +9,18 @@
             </div>
 
             <div class="row" style="margin-bottom: 15px;">
-                <div class="col-md-12">
-                    <a href="{{ route('slider.create') }}" class="btn btn-default">Cadastrar</a>
+                <div class="col-md-5">
+                    <form action="{{ route('department.search') }}" method="get">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Pesquisar" name="value">
+                            <span class="input-group-append">
+                                <button type="submit" class="btn btn-info btn-default">Pesquisar</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-7">
+                    <a href="{{ route('department.create') }}" class="btn btn-default">Cadastrar</a>
                 </div>
             </div>
             <div class="row">
@@ -23,32 +33,28 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th>IMAGE</th>
                                         <th>DEPARTAMENTO</th>
                                         <th>STATUS</th>
-                                        <th>DATA</th>
+                                        <th>DATA CADASTRO</th>
                                         <th>#</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @forelse ($data as $slider)
+                                    @forelse ($data as $item)
                                     <tr>
+                                        <td>{{$item->name}}</td>
+                                        <td>{{$item->status}}</td>
+                                        <td>{{date('d/m/Y', strtotime($item->created_at))}}</td>
                                         <td>
-                                            <img src="{{ url("sliders/{$slider->image_url}") }}" width="100" alt="">
-                                        </td>
-                                        <td>{{$slider->department->name}}</td>
-                                        <td>{{$slider->status}}</td>
-                                        <td>{{date('d/m/Y', strtotime($slider->created_at))}}</td>
-                                        <td>
-                                            <a href="{{ route('slider.edit', ['id'=>$slider->id]) }}" title="Editar"><i
-                                                    class="fa fa-edit"></i></a>
-                                            <a href="{{ route('slider.delete', ['id'=>$slider->id]) }}"
+                                            <a href="{{ route('department.edit', ['id'=>$item->id]) }}"
+                                                title="Editar"><i class="fa fa-edit"></i></a>
+                                            <a href="{{ route('department.delete', ['id'=>$item->id]) }}"
                                                 title="Deletar"><i class="fa fa-trash"></i></a>
                                         </td>
                                     </tr>
                                     @empty
                                     <tr>
-                                        <td colspan="4" class="text-center">Nenhum registro encontrado.</td>
+                                        <td colspan="3" class="text-center">Nenhum registro encontrado.</td>
                                     </tr>
                                     @endforelse
                                 </tbody>

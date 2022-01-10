@@ -117,9 +117,9 @@
                                     </li>
                                     <li class="mini-cart-details mb-30">
                                         <div class="innr-crt-img">
-                                            <img src="assets/images/cart/720-degree-cameras-dual.jpg" alt="">
+                                            <img src="assets/site/images/cart/720-degree-cameras-dual.jpg" alt="">
                                             <span>1x</span>
-                                        </div>
+                                        </div>z
                                         <div class="innr-crt-content">
                                             <span class="product-name">
                                                 <a href="index-2.html#">720 Degree Panoramic HD 360.. </a>
@@ -175,7 +175,7 @@
                         <nav class="categorye-menus category-dropdown">
 
                             <ul class="categories-expand">
-                                @forelse ($departments as $item)
+                                {{-- @forelse ($departments as $item)
                                 <li>
                                     <a href="#">{{$item->name}}</a>
                                 </li>
@@ -183,7 +183,7 @@
                                 <li>
                                     Nenhum departamento cadastrado!
                                 </li>
-                                @endforelse
+                                @endforelse --}}
                             </ul>
                         </nav>
                     </div>
@@ -200,11 +200,11 @@
                             </div>
                             <nav class="main-menu">
                                 <ul>
-                                    @foreach ($menu as $item)
+                                    {{-- @foreach ($menu as $item)
                                     <li>
                                         <a href="#" style="text-transform: uppercase;">{{$item->name}}</a>
                                     </li>
-                                    @endforeach
+                                    @endforeach --}}
                                 </ul>
                             </nav>
                         </div>

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\SliderRequest;
 use App\Models\Departments;
 use App\Models\Slider;
+use Illuminate\Support\Str;
 
 class SliderController extends Controller
 {
@@ -23,7 +24,7 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $data = $this->slider->orderby('created_at', 'desc')->paginate();
+        $data = $this->slider->orderby('created_at', 'desc')->where('status', 'Ativo')->paginate();
         return view('admin.pages.slider.index', compact('data'));
     }
 
@@ -44,32 +45,27 @@ class SliderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(SliderRequest $request)
+    public function store(Request $request)
     {
         $data = $request->all();
-        if ($request->image->isValid()) {
-            $nameFile = Str::of($request->title)->slug('-') . '.' . $request->image->getclientoriginalextension();
-            $image = $request->image->storeAs('posts');
-            $data['image_url'] = $nameFile;
+        $request->validate([
+            'image_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        if ($files = $request->file('image_url')) {
+            // Define upload path
+            $destinationPath = public_path('sliders'); // upload path
+            // Upload Orginal Image           
+            $profileImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
+            $files->move($destinationPath, $profileImage);
+
+            // Save In Database
+            $data['image_url'] = $profileImage;
+            $this->slider->create($data);
+           
         }
-        $this->slider->create($data);
-        return redirect()->back()->with('success', 'Cadastrado com sucesso!');
+        return back()->with('success', 'Image Upload successfully');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function search(Request $request)
-    {
-        $request->validate([
-            'value' => 'required'
-        ]);
-        $data = $this->slider->where('name', 'LIKE', '%' . $request->value . '%')->paginate();
-        return view('admin.pages.department.index', compact('data'));
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -80,7 +76,8 @@ class SliderController extends Controller
     public function edit($id)
     {
         $data = $this->slider->find($id);
-        return view('admin.pages.slider.edit', compact('data'));
+        $departments = Departments::pluck('name', 'id');
+        return view('admin.pages.slider.edit', compact('data', 'departments'));
     }
 
     /**
@@ -90,25 +87,25 @@ class SliderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(SliderRequest $request, $id)
     {
-        $data = $this->slider->find($id);
-        $data->user->update([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => bcrypt($request->password)
+        $slider = $this->slider->find($id);
+        $data = $request->all();
+        $request->validate([
+            'image_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-        $data->update([
-            'cpf' => $request->cpf,
-            'crm' => $request->crm,
-            'rg' => $request->rg,
-            'estado_civil' => $request->estado_civil,
-            'nacionalidade' => $request->nacionalidade,
-            'naturalidade' => $request->naturalidade,
-            'banco' => $request->banco,
-            'agencia' => $request->agencia,
-            'conta' => $request->conta,
-        ]);
+        if ($files = $request->file('image_url')) {
+            // Define upload path
+            $destinationPath = public_path('sliders'); // upload path
+            // Upload Orginal Image           
+            $profileImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
+            $files->move($destinationPath, $profileImage);
+
+            // Save In Database
+            $data['image_url'] = $profileImage;
+            $slider->update($data);
+           
+        }
         return redirect()->back()->with('success', 'Editado com sucesso!');
     }
 

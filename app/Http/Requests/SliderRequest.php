@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class SliderRequest extends FormRequest
 {
@@ -23,9 +24,11 @@ class SliderRequest extends FormRequest
      */
     public function rules()
     {
+        $id = $this->segment(2);
         return [
-            'image_url' => 'required|mimes:jpeg,jpg,png',
-            'department_id' => 'required'
+            'image_url' => 'required',
+            'department_id' => 'required',
+            Rule::unique('sliders')->ignore($id)
         ];
     }
 
@@ -34,6 +37,7 @@ class SliderRequest extends FormRequest
         return [
             'image_url.required' => 'Escolha uma imagem!',
             'image_url.mimes' => 'Formato de imagem inválido!',
+            'image_url.image' => 'O campo file deve ser uma imagem!',
             'department_id.required' => 'Escolha um departamento!'
         ];
     }

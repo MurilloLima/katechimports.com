@@ -1,5 +1,6 @@
-@extends('admin.layouts.app' ,['activePage' => 'demonstrative.create'])
+@extends('admin.layouts.app' ,['activePage' => 'slider.index'])
 @section('title', 'Editar')
+
 @section('content')
 <div class="content-wrapper">
     <div class="content">
@@ -11,8 +12,8 @@
                 <div class="col-md-12">
                     <div class="card card-default">
                         <div class="card-body">
-                            {!! Form::open(['route'=>['department.update', 'id'=>$data]]) !!}
-                            @include('admin.pages.department.edit')
+                            {!! Form::open(['route'=>['slider.update', 'id'=>$data]]) !!}
+                            @include('admin.pages.slider.forms.form')
 
                             <button type="submit" class="btn btn-block btn-default">Editar</button>
                             {!! Form::close() !!}

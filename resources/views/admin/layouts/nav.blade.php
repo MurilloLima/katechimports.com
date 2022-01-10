@@ -65,7 +65,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('department.index', ['id'=>1]) }}"
+                    <a href="{{ route('department.index') }}"
                         class="nav-link {{ $activePage == 'department.index' ? ' active' : '' }}">
                         <i class="nav-icon fas fa-list-alt"></i>
                         <p>
@@ -74,7 +74,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#"
+                    <a href="{{ route('product.index') }}"
                         class="nav-link {{ $activePage == 'product.index' ? ' active' : '' }}">
                         <i class="nav-icon fas fa-cube"></i>
                         <p>
