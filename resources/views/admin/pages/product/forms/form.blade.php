@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-4">
         <div class="form-group">
-            <label for="">Image</label>
+            <label for="">Image 214x214</label>
             <div class="input-group">
                 <div class="custom-file">
                     <label class="custom-file-label" for="exampleInputFile">Escolher arquivo</label>

@@ -4,21 +4,37 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use App\Mail\SendEmailNewsLetter;
+use App\Models\Departments;
+use App\Models\Product;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
-   public function index()
+    private $product;
+    private $department;
+    public function __construct(Product $product, Departments $department)
+    {
+        $this->product = $product;
+        $this->department = $department;
+    }
+    public function index()
     {
         $sliders = Slider::orderby('created_at', 'desc')->get();
-        return view('site.index', compact('sliders'));
+        $products1 = $this->product->orderby('created_at', 'desc')->skip(0)->take(8)->get();
+        $products2 = $this->product->orderby('created_at', 'desc')->skip(8)->take(8)->get();
+        $departmentFooter = $this->department->where('status', 'menu')->orderby('name', 'desc')->skip(0)->take(5)->get();
+        return view('site.index', compact('sliders', 'products1', 'products2', 'departmentFooter'));
     }
 
     public function newsletter()
     {
-        return view('site.newsletter');
+        return view('site.pages.newsletter');
+    }
+
+    public function search(Request $request)
+    {
     }
 
     public function send(Request $request)

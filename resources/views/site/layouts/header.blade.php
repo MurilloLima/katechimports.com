@@ -15,44 +15,44 @@
                     <div class="box-right">
                         <ul>
                             <li class="settings">
-                                <a href="index-2.html#">Compare (2)</a>
+                                <a href="#">Compare (2)</a>
                             </li>
                             <li class="settings">
-                                <a href="index-2.html#" class="drop-toggle">
+                                <a href="#" class="drop-toggle">
                                     <span>USD $</span>
                                     <i class="fa fa-angle-down"></i>
                                 </a>
                                 <ul class="box-dropdown drop-dropdown">
-                                    <li><a href="index-2.html#">EUR €</a></li>
-                                    <li><a href="index-2.html#">USD $</a></li>
+                                    <li><a href="#">EUR €</a></li>
+                                    <li><a href="#">USD $</a></li>
                                 </ul>
                             </li>
                             <li class="settings">
-                                <a href="index-2.html#" class="drop-toggle">
+                                <a href="#" class="drop-toggle">
                                     <img src="assets/images/cuntry/1.jpg" alt="">
                                     English
                                     <i class="fa fa-angle-down"></i>
                                 </a>
                                 <ul class="box-dropdown drop-dropdown">
                                     <li>
-                                        <a href="index-2.html#"><img src="assets/images/cuntry/1.jpg" alt="">
+                                        <a href="#"><img src="assets/images/cuntry/1.jpg" alt="">
                                             English</a>
                                     </li>
                                     <li>
-                                        <a href="index-2.html#"><img src="assets/images/cuntry/2.jpg" alt="">
+                                        <a href="#"><img src="assets/images/cuntry/2.jpg" alt="">
                                             Francies</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="settings">
-                                <a href="index-2.html#" class="drop-toggle">
+                                <a href="#" class="drop-toggle">
                                     My Account
                                     <i class="fa fa-angle-down"></i>
                                 </a>
                                 <ul class="box-dropdown drop-dropdown">
-                                    <li><a href="index-2.html#">My Account</a></li>
-                                    <li><a href="index-2.html#">Checkout</a></li>
-                                    <li><a href="index-2.html#">Sign In</a></li>
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">Checkout</a></li>
+                                    <li><a href="#">Sign In</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -68,14 +68,14 @@
             <div class="row align-items-center">
                 <div class="col-lg-3 col-6">
                     <div class="logo">
-                        <a href="index.html"><img src="{{ asset('assets/site/images/logo/logo-branca.svg') }}" alt=""
+                        <a href="{{ route('site.index') }}"><img src="{{ asset('assets/site/images/logo/logo-branca.svg') }}" alt=""
                                 class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-lg-9 col-6">
                     <div class="header-middle-inner">
                         <div class="search-container">
-                            <form action="index-2.html#">
+                            <form action="#">
                                 <div class="search_box">
                                     <input class="header-search" placeholder="Busque aqui..." type="text">
                                     <button class="header-search-button" type="submit"><i
@@ -104,12 +104,12 @@
                                 <ul>
                                     <li class="mini-cart-details">
                                         <div class="innr-crt-img">
-                                            <img src="assets/images/cart/ear-headphones.jpg" alt="">
+                                            <img src="{{ asset('assets/site/images/cart/ear-headphones.jpg') }}" alt="">
                                             <span>1x</span>
                                         </div>
                                         <div class="innr-crt-content">
                                             <span class="product-name">
-                                                <a href="index-2.html#">SonicFuel Wireless Over-Ear Headphones </a>
+                                                <a href="#">SonicFuel Wireless Over-Ear Headphones </a>
                                             </span>
                                             <span class="product-price">$32.30</span>
                                             <span class="product-size">Size: S</span>
@@ -122,7 +122,7 @@
                                         </div>z
                                         <div class="innr-crt-content">
                                             <span class="product-name">
-                                                <a href="index-2.html#">720 Degree Panoramic HD 360.. </a>
+                                                <a href="#">720 Degree Panoramic HD 360.. </a>
                                             </span>
                                             <span class="product-price">$29.00</span>
                                             <span class="product-size">Dimension: 40cm X 60cm</span>
@@ -166,7 +166,7 @@
                     <div class="categoryes-menu-bar">
                         <div class="categoryes-menu-btn category-toggle">
                             <div class="float-left">
-                                <a href="index-2.html#">TODOS DEPARTAMENTOS</a>
+                                <a href="#">TODOS DEPARTAMENTOS</a>
                             </div>
                             <div class="float-right">
                                 <i class="fa fa-bars"></i>
@@ -194,7 +194,7 @@
                     <div class="header-menu add-sticky">
                         <div class="sticky-container">
                             <div class="logo">
-                                <a href="index.html"><img
+                                <a href="{{ route('site.index') }}"><img
                                         src="{{ asset('assets/site/images/logo/pos-circle-logo.jpg') }}" alt=""
                                         class="img-fluid"></a>
                             </div>
@@ -217,11 +217,11 @@
                         ===========================-->
                     <div class="offcanvas_menu offcanvas_menu_two">
                         <div class="canvas_open">
-                            <a href="index-2.html#"><i class="zmdi zmdi-menu"></i></a>
+                            <a href="#"><i class="zmdi zmdi-menu"></i></a>
                         </div>
                         <div class="offcanvas_menu_wrapper">
                             <div class="canvas_close">
-                                <a href="index-2.html#"><i class="zmdi zmdi-close"></i></a>
+                                <a href="#"><i class="zmdi zmdi-close"></i></a>
                             </div>
                             <div class="welcome_text text-center mb-10">
                                 <p><span>Customer Service: </span> (800) 123 456 789</p>
@@ -229,28 +229,28 @@
                             <div class="box-right text-center mb-20">
                                 <ul>
                                     <li class="settings">
-                                        <a href="index-2.html#" class="drop-toggle">
+                                        <a href="#" class="drop-toggle">
                                             <span>USD $</span>
                                             <i class="fa fa-angle-down"></i>
                                         </a>
                                         <ul class="box-dropdown drop-dropdown">
-                                            <li><a href="index-2.html#">EUR €</a></li>
-                                            <li><a href="index-2.html#">USD $</a></li>
+                                            <li><a href="#">EUR €</a></li>
+                                            <li><a href="#">USD $</a></li>
                                         </ul>
                                     </li>
                                     <li class="settings">
-                                        <a href="index-2.html#" class="drop-toggle">
+                                        <a href="#" class="drop-toggle">
                                             <img src="assets/images/cuntry/1.jpg" alt="">
                                             English
                                             <i class="fa fa-angle-down"></i>
                                         </a>
                                         <ul class="box-dropdown drop-dropdown">
                                             <li>
-                                                <a href="index-2.html#"><img src="assets/images/cuntry/1.jpg" alt="">
+                                                <a href="#"><img src="{{ asset('assets/site/images/cuntry/1.jpg') }}" alt="">
                                                     English</a>
                                             </li>
                                             <li>
-                                                <a href="index-2.html#"><img src="assets/images/cuntry/2.jpg" alt="">
+                                                <a href="#"><img src="{{ asset('assets/site/images/cuntry/2.jpg') }}" alt="">
                                                     Francies</a>
                                             </li>
                                         </ul>
@@ -268,7 +268,7 @@
                                 </div>
                             </div>
                             <div class="offcanvas-search-container mb-40">
-                                <form action="index-2.html#">
+                                <form action="#">
                                     <div class="search_box">
                                         <input placeholder="Search entire store here ..." type="text">
                                         <button type="submit">Search</button>
@@ -279,19 +279,19 @@
                             <div class="offcanvas_menu_cover text-left">
                                 <ul class="offcanvas_main_menu">
                                     <li class="menu-item-has-children active">
-                                        <a href="index-2.html#">Home</a>
+                                        <a href="#">Home</a>
                                         <ul class="sub-menu">
-                                            <li><a href="index.html">Home 1</a></li>
-                                            <li><a href="index-2.html">Home 2</a></li>
+                                            <li><a href="{{ route('site.index') }}">Home 1</a></li>
+                                            <li><a href="">Home 2</a></li>
                                             <li><a href="index-3.html">Home 3</a></li>
                                             <li><a href="index-4.html">Home 4</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="index-2.html#">Shop</a>
+                                        <a href="#">Shop</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item-has-children">
-                                                <a href="index-2.html#">Shop Layouts</a>
+                                                <a href="#">Shop Layouts</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="shop.html">Shop</a></li>
                                                     <li><a href="shop-fullwidth.html">Full Width</a></li>
@@ -303,7 +303,7 @@
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a href="index-2.html#">other Pages</a>
+                                                <a href="#">other Pages</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="shopping-cart.html">Cart</a></li>
                                                     <li><a href="wishlist.html">Wishlist</a></li>
@@ -314,7 +314,7 @@
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a href="index-2.html#">Product Types</a>
+                                                <a href="#">Product Types</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="product-details.html">Product details</a></li>
                                                     <li><a href="product-details-external.html">Product external</a>
@@ -340,10 +340,10 @@
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="index-2.html#">blog</a>
+                                        <a href="#">blog</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item-has-children">
-                                                <a href="index-2.html#">Blog Grid</a>
+                                                <a href="#">Blog Grid</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="blog-grid-right-sidebar.html">Right Sidebar</a></li>
                                                     <li><a href="blog-grid-left-sidebar.html">Left Sidebar</a></li>
@@ -351,7 +351,7 @@
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a href="index-2.html#">Blog List</a>
+                                                <a href="#">Blog List</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="blog-list-right-sidebar.html">Right Sidebar</a></li>
                                                     <li><a href="blog-list-left-sidebar.html">Left Sidebar</a></li>
@@ -359,7 +359,7 @@
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a href="index-2.html#">Blog Single Post</a>
+                                                <a href="#">Blog Single Post</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="blog-details.html">Right Sidebar</a></li>
                                                     <li><a href="blog-details-left-sidebar.html">Left Sidebar</a></li>
@@ -367,7 +367,7 @@
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a href="index-2.html#">Standard Blog</a>
+                                                <a href="#">Standard Blog</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="blog-right-sidebar.html">Right Sidebar</a></li>
                                                     <li><a href="blog-left-sidebar.html">Left Sidebar</a></li>
@@ -377,7 +377,7 @@
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="index-2.html#">pages </a>
+                                        <a href="#">pages </a>
                                         <ul class="sub-menu">
                                             <li><a href="about.html">About Us</a></li>
                                             <li><a href="shop.html">Shop</a></li>
@@ -404,19 +404,19 @@
                             </div>
                             <!-- Offcanvas Menu End -->
                             <div class="offcanvas_footer">
-                                <span><a href="index-2.html#"><i class="fa fa-envelope-o"></i>
+                                <span><a href="#"><i class="fa fa-envelope-o"></i>
                                         info@yourdomain.com</a></span>
                                 <div class="footer_social">
                                     <ul class="d-flex">
-                                        <li><a class="facebook" href="index-2.html#"><i
+                                        <li><a class="facebook" href="#"><i
                                                     class="zmdi zmdi-facebook"></i></a></li>
-                                        <li><a class="twitter" href="index-2.html#"><i
+                                        <li><a class="twitter" href="#"><i
                                                     class="zmdi zmdi-twitter"></i></a></li>
-                                        <li><a class="youtube" href="index-2.html#"><i
+                                        <li><a class="youtube" href="#"><i
                                                     class="zmdi zmdi-youtube"></i></a></li>
-                                        <li><a class="google" href="index-2.html#"><i
+                                        <li><a class="google" href="#"><i
                                                     class="zmdi zmdi-google-plus"></i></a></li>
-                                        <li><a class="linkedin" href="index-2.html#"><i
+                                        <li><a class="linkedin" href="#"><i
                                                     class="zmdi zmdi-linkedin"></i></a></li>
                                     </ul>
                                 </div>

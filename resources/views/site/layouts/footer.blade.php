@@ -41,7 +41,7 @@
                 <div class="col-lg-4">
                     <div class="footer-single-widget">
                         <div class="footer-logo mb-40">
-                            <a href="index.html"><img src="assets/site/images/logo/pos-circle-logo.jpg" alt=""></a>
+                            <a href="index.html"><img src="{{ asset('assets/site/images/logo/logo-dark.png') }}" width="200" alt=""></a>
                         </div>
                         <div class="widget-body">
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis vero necessitatibus,
@@ -69,25 +69,24 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-6">
                             <div class="widgets_container">
-                                <h6>Information</h6>
+                                <h6>Informações</h6>
                                 <div class="footer_menu">
                                     <ul>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="contact.html"> Contact us</a></li>
-                                        <li><a href="#"> Privecy Policy</a></li>
-                                        <li><a href="#">Terms & Conditions</a></li>
+                                        <li><a href="#">Sobre nós</a></li>
+                                        <li><a href="#">Política de Privacidade</a></li>
+                                        <li><a href="#">Termos e Condições</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-6">
                             <div class="widgets_container">
-                                <h6>My Account</h6>
+                                <h6>Minha conta</h6>
                                 <div class="footer_menu">
                                     <ul>
-                                        <li><a href="#">My Account</a></li>
-                                        <li><a href="#">Older History</a></li>
-                                        <li><a href="#">Wishlist</a></li>
+                                        <li><a href="#">Meus Dados</a></li>
+                                        <li><a href="#">Ordem de pedidos</a></li>
+                                        <li><a href="#">Lista de Desejos</a></li>
                                         <li><a href="#">Newslatter</a></li>
                                     </ul>
                                 </div>
@@ -95,26 +94,24 @@
                         </div>
                         <div class="col-lg-3 col-md-3 col-6">
                             <div class="widgets_container">
-                                <h6>Find It Fast</h6>
+                                <h6>Encontre</h6>
                                 <div class="footer_menu">
                                     <ul>
-                                        <li><a href="#">Desktop</a></li>
-                                        <li><a href="#">Laptop & Mobile</a></li>
-                                        <li><a href="#">Components</a></li>
-                                        <li><a href="#">Terms & Conditions</a></li>
+                                        @foreach ($departmentFooter as $item)
+                                        <li><a href="#">{{$item->name}}</a></li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-6">
                             <div class="widgets_container">
-                                <h6>Customer Service</h6>
+                                <h6>Atendimento ao Cliente</h6>
                                 <div class="footer_menu">
                                     <ul>
-                                        <li><a href="#">Sitemap</a></li>
-                                        <li><a href="#">My Account</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                        <li><a href="#">Delivery Information</a></li>
+                                        <li><a href="#">Site mapa</a></li>
+                                        <li><a href="#">Contate-nos</a></li>
+                                        <li><a href="#">Informação de entrega</a></li>
                                     </ul>
                                 </div>
                             </div>

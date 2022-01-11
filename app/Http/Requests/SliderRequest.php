@@ -26,10 +26,9 @@ class SliderRequest extends FormRequest
     {
         $id = $this->segment(4);
         return [
-            'image_url' => 'required',
+            'image_url' => "required|unique:sliders,image_url,{$id},id",
             'department_id' => 'required',
             'status' => 'required',
-            Rule::unique('sliders')->ignore($id)
         ];
     }
 
