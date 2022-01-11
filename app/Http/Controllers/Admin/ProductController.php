@@ -68,6 +68,7 @@ class ProductController extends Controller
                     ->withInput();
         }
         $data['price'] = $this->formated->moneyFormated($request->price);
+        $data['cost_price'] = $this->formated->moneyFormated($request->cost_price);
         $data['slug'] = str_slug($request->name);
         $this->product->create($data);
         return back()->with('success', 'Cadastrado com sucesso!');
@@ -115,6 +116,7 @@ class ProductController extends Controller
                     ->withInput();
         }
         $data['price'] = $this->formated->moneyFormated($request->price);
+        $data['cost_price'] = $this->formated->moneyFormated($request->cost_price);
         $data['slug'] = str_slug($request->name);
         $product->update($data); // Finally, save the record.
         return redirect()->back()->with('success', 'Editado com sucesso!');

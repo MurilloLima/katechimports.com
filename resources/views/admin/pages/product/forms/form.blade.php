@@ -21,7 +21,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
         <div class="form-group">
             <label for="">DEPARTAMENTO</label>
             {!! Form::select('department_id', $departments, $data->department_id ?? old('department_id'),
@@ -30,8 +30,15 @@
     </div>
     <div class="col-md-2">
         <div class="form-group">
-            <label for="">VALOR</label>
+            <label for="">PREÇO</label>
             <input type="text" class="form-control money2" name="price" value="{{$data->price ?? old('price')}}">
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label for="">PREÇO DE CUSTO</label>
+            <input type="text" class="form-control money2" name="cost_price"
+                value="{{$data->cost_price ?? old('cost_price')}}">
         </div>
     </div>
     <div class="col-md-4">

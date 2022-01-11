@@ -10,6 +10,7 @@ class Product extends Model
         'department_id',
         'name',
         'price',
+        'cost_price',
         'descryption',
         'image_url',
         'status',

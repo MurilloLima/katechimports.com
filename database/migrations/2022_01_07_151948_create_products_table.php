@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->decimal('price', 10, 2);
+            $table->decimal('cost_price', 10, 2)->nullable();
             $table->text('descryption')->nullable();
             $table->string('image_url')->default('default.png');
             $table->string('status')->default('Ativo');
