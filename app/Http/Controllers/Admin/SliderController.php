@@ -24,7 +24,7 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $data = $this->slider->orderby('created_at', 'desc')->where('status', 'Ativo')->paginate();
+        $data = $this->slider->orderby('created_at', 'desc')->paginate();
         return view('admin.pages.slider.index', compact('data'));
     }
 

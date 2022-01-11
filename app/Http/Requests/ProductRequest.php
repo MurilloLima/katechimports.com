@@ -28,7 +28,7 @@ class ProductRequest extends FormRequest
         $rules = [
             'image_url' => [
                 'required',
-                'mimes:jpeg,bmp,png'
+                'mimes:jpg,jpeg,bmp,png'
             ],
             'name' => "required|unique:products,name,{$user},id",
             'price' => 'required',

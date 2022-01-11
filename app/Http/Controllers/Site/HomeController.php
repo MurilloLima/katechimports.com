@@ -21,7 +21,7 @@ class HomeController extends Controller
     }
     public function index()
     {
-        $sliders = Slider::orderby('created_at', 'desc')->get();
+        $sliders = Slider::orderby('created_at', 'desc')->where('status', 'Ativo')->get();
         $products1 = $this->product->orderby('created_at', 'desc')->skip(0)->take(8)->get();
         $products2 = $this->product->orderby('created_at', 'desc')->skip(8)->take(8)->get();
         $departmentFooter = $this->department->where('status', 'menu')->orderby('name', 'desc')->skip(0)->take(5)->get();
