@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+<nav class="main-header navbar navbar-expand navbar-dark navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
         <li class="nav-item">
@@ -32,7 +32,7 @@
 <!-- /.navbar -->
 
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar elevation-4 sidebar-light-dark">
+<aside class="main-sidebar elevation-4 sidebar-dark-green">
     <!-- Brand Logo -->
     <a href="{{ route('product.index') }}" class="brand-link">
         <img src="{{ asset('assets/site/images/icon/favicon-48X48.png') }}" alt="AdminLTE Logo" class="brand-image img-circle"

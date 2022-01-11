@@ -12,11 +12,12 @@
                 <div class="col-md-12">
                     <div class="card card-default">
                         <div class="card-body">
-                            {!! Form::open(['route'=>['slider.update', 'id'=>$data]]) !!}
-                            @include('admin.pages.slider.forms.form')
-
-                            <button type="submit" class="btn btn-block btn-default">Editar</button>
-                            {!! Form::close() !!}
+                            <form action="{{ route('slider.update', ['id'=>$data]) }}" method="post"
+                                enctype="multipart/form-data">
+                                @csrf
+                                @include('admin.pages.slider.forms.form')
+                                <button type="submit" class="btn btn-block btn-default">Editar</button>
+                            </form>
                         </div>
                     </div>
 

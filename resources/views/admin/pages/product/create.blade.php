@@ -1,4 +1,4 @@
-@extends('admin.layouts.app',['activePage' => 'slider.index'])
+@extends('admin.layouts.app',['activePage' => 'product.index'])
 @section('title', 'Cadastrar')
 @section('content')
 <div class="content-wrapper">
@@ -11,9 +11,9 @@
                 <div class="col-md-12">
                     <div class="card card-default">
                         <div class="card-body">
-                            <form action="{{ route('slider.store') }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
                                 @csrf
-                                @include('admin.pages.slider.forms.form')
+                                @include('admin.pages.product.forms.form')
                                 <button type="submit" class="btn btn-block btn-default">Cadastrar</button>
                             </form>
                         </div>

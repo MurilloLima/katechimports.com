@@ -1,5 +1,6 @@
-@extends('admin.layouts.app',['activePage' => 'slider.index'])
-@section('title', 'Cadastrar')
+@extends('admin.layouts.app' ,['activePage' => 'product.index'])
+@section('title', 'Editar')
+
 @section('content')
 <div class="content-wrapper">
     <div class="content">
@@ -11,14 +12,19 @@
                 <div class="col-md-12">
                     <div class="card card-default">
                         <div class="card-body">
-                            <form action="{{ route('slider.store') }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('product.update', ['id'=>$data]) }}" method="post"
+                                enctype="multipart/form-data">
                                 @csrf
-                                @include('admin.pages.slider.forms.form')
-                                <button type="submit" class="btn btn-block btn-default">Cadastrar</button>
+                                {{-- {!! Form::open(['route'=>['product.update', 'id'=>$data]]) !!} --}}
+                                @include('admin.pages.product.forms.form')
+                                <button type="submit" class="btn btn-block btn-default">Editar</button>
+                                {{-- {!! Form::close() !!} --}}
                             </form>
                         </div>
                     </div>
+
                 </div>
+
             </div>
         </div>
     </div>

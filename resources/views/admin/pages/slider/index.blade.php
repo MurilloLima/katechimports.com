@@ -34,7 +34,7 @@
                                     @forelse ($data as $slider)
                                     <tr>
                                         <td>
-                                            <img src="{{ url("sliders/{$slider->image_url}") }}" width="100" alt="">
+                                            <img src="{{ url("storage/sliders/{$slider->image_url}") }}" width="100" alt="">
                                         </td>
                                         <td>{{$slider->department->name}}</td>
                                         <td>{{$slider->status}}</td>
@@ -48,7 +48,7 @@
                                     </tr>
                                     @empty
                                     <tr>
-                                        <td colspan="4" class="text-center">Nenhum registro encontrado.</td>
+                                        <td colspan="5" class="text-center">Nenhum registro encontrado.</td>
                                     </tr>
                                     @endforelse
                                 </tbody>

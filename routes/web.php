@@ -8,6 +8,7 @@ use App\Http\Controllers\Site\{
 use Illuminate\Support\Facades\Auth;
 
 Route::get('site/', [HomeController::class, 'index'])->name('site.index');
+Route::get('departamento/{slug}', [HomeController::class, 'department'])->name('site.department');
 
 // newsletter
 Route::get('/', [HomeController::class, 'newsletter'])->name('site.newsletter');
@@ -30,7 +31,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('product/create/', 'Admin\ProductController@create')->name('product.create');
     Route::post('product/store/', 'Admin\ProductController@store')->name('product.store');
     Route::get('product/edit/{id}/', 'Admin\ProductController@edit')->name('product.edit');
-    Route::put('product/update/{id}', 'Admin\ProductController@update')->name('product.update');
+    Route::post('product/update/{id}', 'Admin\ProductController@update')->name('product.update');
     Route::get('product/delete/{id}', 'Admin\ProductController@destroy')->name('product.delete');
     Route::get('product/relatorios/', 'Admin\ProductController@report')->name('product.report');
     Route::get('product/search/', 'Admin\ProductController@search')->name('product.search');

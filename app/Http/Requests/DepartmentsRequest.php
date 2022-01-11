@@ -23,8 +23,9 @@ class DepartmentsRequest extends FormRequest
      */
     public function rules()
     {
+        $id = $this->segment(4);
         return [
-            'name' => 'required|unique:departments',
+            'name' => "required|unique:departments,name,{$id},id",
         ];
     }
 

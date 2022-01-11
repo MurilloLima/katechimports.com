@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class ProductRequest extends FormRequest
 {
@@ -13,7 +14,7 @@ class ProductRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +24,18 @@ class ProductRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
+        $user = $this->segment(4);
+        $rules = [
+            'image_url' => [
+                'required',
+                'mimes:jpeg,bmp,png'
+            ],
+            'name' => "required|unique:products,name,{$user},id",
+            'price' => 'required',
+            'status' => 'required',
+            'department_id' => 'required',
         ];
+
+        return $rules;
     }
 }

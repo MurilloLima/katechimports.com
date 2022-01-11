@@ -24,10 +24,11 @@ class SliderRequest extends FormRequest
      */
     public function rules()
     {
-        $id = $this->segment(2);
+        $id = $this->segment(4);
         return [
             'image_url' => 'required',
             'department_id' => 'required',
+            'status' => 'required',
             Rule::unique('sliders')->ignore($id)
         ];
     }

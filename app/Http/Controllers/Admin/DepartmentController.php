@@ -50,7 +50,7 @@ class DepartmentController extends Controller
         $this->department->create([
             'name' => $request->name,
             'status' => $request->status,
-            'slug' => str_slug($request->status),
+            'slug' => str_slug($request->name),
         ]);
         return redirect()->back()->with('success', 'Cadastrado com sucesso!');
     }
@@ -79,7 +79,7 @@ class DepartmentController extends Controller
     public function edit($id)
     {
         $data = $this->department->find($id);
-        return view('admin.pages.slider.edit', compact('data'));
+        return view('admin.pages.department.edit', compact('data'));
     }
 
     /**
@@ -89,14 +89,14 @@ class DepartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(DepartmentsRequest $request, $id)
     {
         $data = $this->department->find($id);
 
         $data->update([
             'name' => $request->name,
             'status' => $request->status,
-            'slug' => str_slug($request->status),
+            'slug' => str_slug($request->name),
         ]);
         return redirect()->back()->with('success', 'Editado com sucesso!');
     }

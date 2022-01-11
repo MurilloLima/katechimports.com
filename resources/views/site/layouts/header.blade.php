@@ -175,15 +175,15 @@
                         <nav class="categorye-menus category-dropdown">
 
                             <ul class="categories-expand">
-                                {{-- @forelse ($departments as $item)
+                                @forelse ($departments as $item)
                                 <li>
-                                    <a href="#">{{$item->name}}</a>
+                                    <a href="{{ route('site.department', ['slug'=>$item->slug]) }}">{{$item->name}}</a>
                                 </li>
                                 @empty
                                 <li>
                                     Nenhum departamento cadastrado!
                                 </li>
-                                @endforelse --}}
+                                @endforelse
                             </ul>
                         </nav>
                     </div>
@@ -200,11 +200,11 @@
                             </div>
                             <nav class="main-menu">
                                 <ul>
-                                    {{-- @foreach ($menu as $item)
+                                    @foreach ($menu as $item)
                                     <li>
-                                        <a href="#" style="text-transform: uppercase;">{{$item->name}}</a>
+                                        <a href="{{ route('site.department', ['slug'=>$item->slug]) }}" style="text-transform: uppercase;">{{$item->name}}</a>
                                     </li>
-                                    @endforeach --}}
+                                    @endforeach
                                 </ul>
                             </nav>
                         </div>

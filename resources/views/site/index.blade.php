@@ -11,29 +11,21 @@
             <div class="col-lg-12">
                 <div class="slider_area slider-two slider-tools row">
                     <!-- Single Slider Start -->
-                    <div class="single_slider hero-bg-1">
-                        {{-- <div class="slider_content color_two">
+                    <div class="single_slider">
+                        @foreach ($sliders as $slider)
+                        <div class="slider_content" style="background-image: url(sliders/{{$slider->image_url}})">
+                            {{-- <img src="{{ url("") }}" alt=""> --}}
                             <h5>The Hottest <br> Trend</h5>
                             <h2>Laptop <br> Tablets Outlet</h2>
                             <div class="pt-des">
                                 <p><span>25%</span>Starting at <span>$340.00</span></p>
                             </div>
                             <a href="shop.html">Shop Now</a>
-                        </div> --}}
+                        </div>
+                        @endforeach
                     </div>
                     <!-- Single Slider End -->
-                    <!-- Single Slider Start -->
-                    <div class="single_slider hero-bg-2">
-                        {{-- <div class="slider_content color_two">
-                            <h5>The Hottest <br> Trend</h5>
-                            <h2>Cellphone <br> Smartphone Not 2</h2>
-                            <div class="pt-des">
-                                <p><span>35%</span>Starting at <span>$120.00</span></p>
-                            </div>
-                            <a href="shop.html">Shop Now</a>
-                        </div> --}}
-                    </div>
-                    <!-- Single Slider End -->
+
                 </div>
             </div>
         </div>

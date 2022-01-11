@@ -15,7 +15,13 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name')->unique();
+            $table->string('name');
+            $table->decimal('price', 10, 2);
+            $table->text('descryption')->nullable();
+            $table->string('image_url')->default('default.png');
+            $table->string('status')->default('Ativo');
+            $table->integer('department_id');
+            $table->string('slug');
             $table->timestamps();
         });
     }

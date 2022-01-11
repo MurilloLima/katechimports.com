@@ -45,25 +45,28 @@ class SliderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SliderRequest $request)
     {
         $data = $request->all();
-        $request->validate([
-            'image_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
-        if ($files = $request->file('image_url')) {
-            // Define upload path
-            $destinationPath = public_path('sliders'); // upload path
-            // Upload Orginal Image           
-            $profileImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
-            $files->move($destinationPath, $profileImage);
 
-            // Save In Database
-            $data['image_url'] = $profileImage;
-            $this->slider->create($data);
-           
+        if ($request->hasFile('image_url') && $request->file('image_url')->isValid()) {
+
+            $name = uniqid(date('HisYmd'));
+            $extension = $request->file('image_url')->extension();
+            $nameFile = "{$name}.{$extension}";
+
+            $upload = $request->image_url->storeAs('sliders', $nameFile);
+
+            $data['image_url'] = $nameFile;
+
+            if (!$upload)
+                return redirect()
+                    ->back()
+                    ->with('error', 'Falha ao fazer upload')
+                    ->withInput();
         }
-        return back()->with('success', 'Image Upload successfully');
+        $this->slider->create($data);
+        return back()->with('success', 'Cadastrado com sucesso!');
     }
 
 
@@ -91,22 +94,24 @@ class SliderController extends Controller
     {
         $slider = $this->slider->find($id);
         $data = $request->all();
-        $request->validate([
-            'image_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
-        if ($files = $request->file('image_url')) {
-            // Define upload path
-            $destinationPath = public_path('sliders'); // upload path
-            // Upload Orginal Image           
-            $profileImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
-            $files->move($destinationPath, $profileImage);
+        if ($request->hasFile('image_url') && $request->file('image_url')->isValid()) {
 
-            // Save In Database
-            $data['image_url'] = $profileImage;
-            $slider->update($data);
-           
+            $name = uniqid(date('HisYmd'));
+            $extension = $request->file('image_url')->extension();
+            $nameFile = "{$name}.{$extension}";
+
+            $upload = $request->image_url->storeAs('sliders', $nameFile);
+
+            $data['image_url'] = $nameFile;
+
+            if (!$upload)
+                return redirect()
+                    ->back()
+                    ->with('error', 'Falha ao fazer upload')
+                    ->withInput();
         }
-        return redirect()->back()->with('success', 'Editado com sucesso!');
+        $slider->update($data);
+        return back()->with('success', 'Editado com sucesso!');
     }
 
     /**
