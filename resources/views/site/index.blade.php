@@ -117,6 +117,7 @@
                                     </div>
                                     <div class="price-box">
                                         <span class="regular-price">R${{$item->price}}</span>
+                                        <span class="old-price"><del>R${{$item->lost_price}}</del></span>
                                     </div>
                                     <div class="cart">
                                         <div class="add-to-cart">

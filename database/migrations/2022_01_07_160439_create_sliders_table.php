@@ -15,8 +15,7 @@ class CreateSlidersTable extends Migration
     {
         Schema::create('sliders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('department_id');
-            $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
+            $table->integer('department_id');
             $table->string('image_url');
             $table->string('status')->default('ativo');
             $table->timestamps();
