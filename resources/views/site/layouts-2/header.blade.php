@@ -67,7 +67,7 @@
                 <div class="col-lg-3 col-6">
                     <div class="logo">
                         <a href="{{route('site.index')}}"><img
-                                src="{{ asset('assets/site/images/logo/logo-branca.svg') }}" alt=""
+                                src="{{ asset('assets/site/images/logo/logo-white.png') }}" alt=""
                                 class="img-fluid"></a>
                     </div>
                 </div>
@@ -111,10 +111,10 @@
                     <div class="categoryes-menu-bar">
                         <div class="categoryes-menu-btn category-toggle">
                             <div class="float-left">
-                                <a href="#">TODOS DEPARTAMENTOS</a>
+                                <i class="fa fa-angle-down"></i>
                             </div>
                             <div class="float-right">
-                                <i class="fa fa-angle-down"></i>
+                                <a href="#">TODOS DEPARTAMENTOS</a>
                             </div>
                         </div>
                         <nav class="categorye-menus category-dropdown">

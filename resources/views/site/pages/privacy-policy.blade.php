@@ -1,5 +1,5 @@
 @extends('site.layouts-2.app')
-@section('title', 'Sobre')
+@section('title', 'Política de Privacidade')
 
 @section('content')
 <!--=====================
@@ -14,7 +14,7 @@
                         <li>
                             <h1><a href="index.html">Home</a></h1>
                         </li>
-                        <li>Sobre</li>
+                        <li>Política de Privacidade</li>
                     </ul>
                 </div>
             </div>

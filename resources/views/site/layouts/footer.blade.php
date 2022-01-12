@@ -42,7 +42,7 @@
                     <div class="footer-single-widget">
                         <div class="footer-logo mb-40">
                             <a href="index.html"><img src="{{ asset('assets/site/images/logo/logo-dark.png') }}"
-                                    width="200" alt=""></a>
+                                    width="140" alt=""></a>
                         </div>
                         <div class="widget-body">
                             <p>
@@ -52,8 +52,8 @@
 
                             </p>
                             <div class="widget-address mt-30 mb-20">
-                                <p><strong>Endereço:</strong> AVENIDA TIRADENTES S/N, CENTRO <br>
-                                    CEP. 65970-000 - PORTO FRANCO-MA</p>
+                                <p><strong>Endereço:</strong> Avenida Tiradentes S/N, Centro <br>
+                                    CEP. 65970-000 - Porto Franco-MA</p>
                                 <p><strong>Telefone|WhatsApp:</strong> (99) 98202-3038</p>
                                 <p><strong>E-mail:</strong> contatokatechimports@gmail.com</p>
                             </div>

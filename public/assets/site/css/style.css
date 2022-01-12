@@ -52,8 +52,13 @@ body {
   height: 100%;
 }
 
+@font-face {
+  font-family:'hp-simplified-265';
+  src:url("../fonts/hp-simplified-265.ttf");
+}
+
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "hp-simplified-265", sans-serif;
   font-size: 14px;
   font-weight: 400;
   font-style: normal;
@@ -814,8 +819,8 @@ ul {
 .categoryes-menu-btn {
   position: relative;
   z-index: 9;
-  background: #4B4B4D;
-  padding: 10px 20px;
+  background: #3E3E40;
+  padding: 6px 40px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -847,6 +852,8 @@ ul {
 .categoryes-menu-btn i {
   font-size: 14px;
   font-weight: 500;
+  color: #A8CF45;
+  font-weight: bold;
 }
 
 .categoryes-menu-bar .categorye-menus {
@@ -1359,7 +1366,7 @@ ul.category-mega li.cat-mega-title ul li:hover a {
 
 /*-- Home Two Header Css Start --*/
 .header-two .categoryes-menu-btn {
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 0px;
 }
 
 .header-two .main-menu>ul>li>a {
@@ -3282,7 +3289,7 @@ ul.category-mega li.cat-mega-title ul li:hover a {
   line-height: 22px;
   display: block;
   overflow: hidden;
-  color: #3c74b9;
+  color: #3E3E40;
   font-size: 14px;
   margin-bottom: 5px;
   -webkit-transition: 0.3s;
@@ -3345,7 +3352,7 @@ ul.category-mega li.cat-mega-title ul li:hover a {
 .price-box .regular-price {
   font-size: 14px;
   font-weight: 900;
-  color: #e12e2e;
+  color: #A8CF45;
   margin-right: 5px;
 }
 
