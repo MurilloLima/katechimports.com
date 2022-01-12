@@ -19,6 +19,7 @@ class HomeController extends Controller
         $this->product = $product;
         $this->department = $department;
     }
+
     public function index()
     {
         $sliders = Slider::orderby('created_at', 'desc')->where('status', 'Ativo')->get();
@@ -31,6 +32,16 @@ class HomeController extends Controller
     public function newsletter()
     {
         return view('site.pages.newsletter');
+    }
+
+    public function about()
+    {
+        return view('site.pages.about');
+    }
+
+    public function privacy()
+    {
+        return view('site.pages.privacy-policy');
     }
 
     public function search(Request $request)

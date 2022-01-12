@@ -41,16 +41,21 @@
                 <div class="col-lg-4">
                     <div class="footer-single-widget">
                         <div class="footer-logo mb-40">
-                            <a href="index.html"><img src="{{ asset('assets/site/images/logo/logo-dark.png') }}" width="200" alt=""></a>
+                            <a href="index.html"><img src="{{ asset('assets/site/images/logo/logo-dark.png') }}"
+                                    width="200" alt=""></a>
                         </div>
                         <div class="widget-body">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis vero necessitatibus,
-                                blanditiis explicabo enim aliquid libero eos ab, voluptate optio, unde eius. Molestias
-                                molestiae odit minima quae, fuga autem quod.</p>
+                            <p>
+                                A KATECH IMPORTS nasceu em abril de 2020 com a missão de se tornar referência
+                                no varejo e-commerce do país. Voltada a oferecer o melhor em tecnologia, informática,
+                                telefonia e acessórios das maiores marcas do mercado.
+
+                            </p>
                             <div class="widget-address mt-30 mb-20">
-                                <p><strong>Address:</strong> 123 Main Street, Anytown, CA 12345 USA.</p>
-                                <p><strong>Number Phone:</strong> (800) 123 456 - (800) 123 456.</p>
-                                <p><strong>Address Email:</strong> support@katechimports.com</p>
+                                <p><strong>Endereço:</strong> AVENIDA TIRADENTES S/N, CENTRO <br>
+                                    CEP. 65970-000 - PORTO FRANCO-MA</p>
+                                <p><strong>Telefone|WhatsApp:</strong> (99) 98202-3038</p>
+                                <p><strong>E-mail:</strong> contatokatechimports@gmail.com</p>
                             </div>
                         </div>
                         <div class="footer_social">
@@ -67,19 +72,19 @@
                 </div>
                 <div class="col-lg-8">
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 col-6">
+                        <div class="col-lg-4 col-md-3 col-6">
                             <div class="widgets_container">
                                 <h6>Informações</h6>
                                 <div class="footer_menu">
                                     <ul>
-                                        <li><a href="#">Sobre nós</a></li>
-                                        <li><a href="#">Política de Privacidade</a></li>
+                                        <li><a href="{{ route('site.about') }}">Sobre nós</a></li>
+                                        <li><a href="{{ route('site.privacy') }}">Política de Privacidade</a></li>
                                         <li><a href="#">Termos e Condições</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-6">
+                        {{-- <div class="col-lg-3 col-md-3 col-6">
                             <div class="widgets_container">
                                 <h6>Minha conta</h6>
                                 <div class="footer_menu">
@@ -91,22 +96,22 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-6">
+                        </div> --}}
+                        <div class="col-lg-4 col-md-3 col-6">
                             <div class="widgets_container">
                                 <h6>Encontre</h6>
                                 <div class="footer_menu">
                                     <ul>
-                                        @foreach ($departmentFooter as $item)
-                                        <li><a href="#">{{$item->name}}</a></li>
+                                        @foreach ($menu as $item)
+                                        <li style="text-transform: capitalize;"><a href="#">{{$item->name}}</a></li>
                                         @endforeach
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-6">
+                        <div class="col-lg-4 col-md-3 col-6">
                             <div class="widgets_container">
-                                <h6>Atendimento ao Cliente</h6>
+                                <h6>Atendimento</h6>
                                 <div class="footer_menu">
                                     <ul>
                                         <li><a href="#">Site mapa</a></li>
@@ -137,7 +142,7 @@
                 <div class="col-lg-7 col-md-12 col-12">
                     <div class="payment">
                         <a href="#">
-                            <img src="assets/site/images/payment/footerend.png" alt="" class="img-fluid">
+                            <img src="{{ asset('assets/site/images/payment/footerend.png') }}" alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
@@ -170,28 +175,28 @@
                                     <div class="tab-pane fade show active" id="tab1" role="tabpanel">
                                         <div class="modal_tab_img">
                                             <a href="#"><img
-                                                    src="assets/site/images/product/product-details/product-details-1.jpg"
+                                                    src="{{ asset('assets/site/images/product/product-details/product-details-1.jpg') }}"
                                                     alt="" class="img-fluid"></a>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="tab2" role="tabpanel">
                                         <div class="modal_tab_img">
                                             <a href="#"><img
-                                                    src="assets/site/images/product/product-details/product-details-2.jpg"
+                                                    src="{{ asset('assets/site/images/product/product-details/product-details-2.jpg') }}"
                                                     alt="" class="img-fluid"></a>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="tab3" role="tabpanel">
                                         <div class="modal_tab_img">
                                             <a href="#"><img
-                                                    src="assets/site/images/product/product-details/product-details-3.jpg"
+                                                    src="{{ asset('assets/site/images/product/product-details/product-details-3.jpg') }}"
                                                     alt="" class="img-fluid"></a>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="tab4" role="tabpanel">
                                         <div class="modal_tab_img">
                                             <a href="#"><img
-                                                    src="assets/site/images/product/product-details/product-details-4.jpg"
+                                                    src="{{ asset('assets/site/images/product/product-details/product-details-4.jpg') }}"
                                                     alt="" class="img-fluid"></a>
                                         </div>
                                     </div>
@@ -201,25 +206,25 @@
                                         <li>
                                             <a class="nav-link active" data-bs-toggle="tab" href="#tab1" role="tab"
                                                 aria-controls="tab1" aria-selected="false"><img
-                                                    src="assets/site/images/product/product-details/product-thumb-1.jpg"
+                                                    src="{{ asset('assets/site/images/product/product-details/product-thumb-1.jpg') }}"
                                                     alt="" class="img-fluid"></a>
                                         </li>
                                         <li>
                                             <a class="nav-link" data-bs-toggle="tab" href="#tab2" role="tab"
                                                 aria-controls="tab2" aria-selected="false"><img
-                                                    src="assets/site/images/product/product-details/product-thumb-2.jpg"
+                                                    src="{{ asset('assets/site/images/product/product-details/product-thumb-2.jpg') }}"
                                                     alt="" class="img-fluid"></a>
                                         </li>
                                         <li>
                                             <a class="nav-link button_three" data-bs-toggle="tab" href="#tab3"
                                                 role="tab" aria-controls="tab3" aria-selected="false"><img
-                                                    src="assets/site/images/product/product-details/product-thumb-3.jpg"
+                                                    src="{{ asset('assets/site/images/product/product-details/product-thumb-3.jpg') }}"
                                                     alt="" class="img-fluid"></a>
                                         </li>
                                         <li>
                                             <a class="nav-link" data-bs-toggle="tab" href="#tab4" role="tab"
                                                 aria-controls="tab4" aria-selected="false"><img
-                                                    src="assets/site/images/product/product-details/product-thumb-4.jpg"
+                                                    src="{{ asset('assets/site/images/product/product-details/product-thumb-4.jpg') }}"
                                                     alt="" class="img-fluid"></a>
                                         </li>
 

@@ -451,7 +451,6 @@ ul {
   display: -ms-flexbox;
   display: flex;
   border-radius: 30px;
-  border: 2px solid #4B4B4D;
   width: 550px;
   position: relative;
 }
@@ -1364,11 +1363,11 @@ ul.category-mega li.cat-mega-title ul li:hover a {
 }
 
 .header-two .main-menu>ul>li>a {
-  color: #3d3d3d;
+  color: #ffffff;
 }
 
 .header-two .main-menu>ul>li>a:hover {
-  color: #4B4B4D;
+  color: #A8CF45;
 }
 
 .header-two .categoryes-menu-bar .categorye-menus {

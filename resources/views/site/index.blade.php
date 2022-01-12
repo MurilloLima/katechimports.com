@@ -43,19 +43,19 @@
         <div class="row">
             <div class="col-lg-4 col-md-4 col-12 text-center">
                 <div class="single-banner mt-30">
-                    <a href="index-2.html#"><img src="assets/site/images/banner/banner1-1.png" alt=""
+                    <a href="{{route('site.index')}}#"><img src="{{ asset('assets/site/images/banner/banner1-1.png') }}" alt=""
                             class="img-fluid"></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-12 text-center">
                 <div class="single-banner mt-30">
-                    <a href="index-2.html#"><img src="assets/site/images/banner/banner2-2.png" alt=""
+                    <a href="{{route('site.index')}}#"><img src="{{ asset('assets/site/images/banner/banner2-2.png') }}" alt=""
                             class="img-fluid"></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-12 text-center">
                 <div class="single-banner mt-30">
-                    <a href="index-2.html#"><img src="assets/site/images/banner/banner3-3.png" alt=""
+                    <a href="{{route('site.index')}}#"><img src="{{ asset('assets/site/images/banner/banner3-3.png') }}" alt=""
                             class="img-fluid"></a>
                 </div>
             </div>
@@ -75,7 +75,7 @@
             <div class="col-lg-12">
                 <div class="product-details-home2 section-margin">
                     <div class="block-title">
-                        <h6>Produtos em Destaque</h6>
+                        <h6>Laçamentos</h6>
                     </div>
                     <div class="product-carousel-home2 slick-custom slick-custom-default nav-top">
                         @foreach ($products1 as $item)
@@ -92,8 +92,8 @@
                                             <span>Novo</span>
                                         </div>
                                     </div>
-                                    <div class="action-link">
-                                        <a class="quick-view same-link" href="index-2.html#" title="Quick view"
+                                    {{-- <div class="action-link">
+                                        <a class="quick-view same-link" href="{{route('site.index')}}#" title="Quick view"
                                             data-bs-toggle="modal" data-bs-target="#modal_box"
                                             data-original-title="quick view"><i
                                                 class="zmdi zmdi-eye zmdi-hc-fw"></i></a>
@@ -102,7 +102,7 @@
                                         <a class="wishlist-add same-link" href="wishlist.html"
                                             title="Add to wishlist"><i
                                                 class="zmdi zmdi-favorite-outline zmdi-hc-fw"></i></a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="product-caption">
                                     <div class="product-name">
@@ -116,8 +116,8 @@
                                         <span class="yellow"><i class="fa fa-star"></i></span>
                                     </div>
                                     <div class="price-box">
-                                        <span class="regular-price">R${{$item->price}}</span>
-                                        <span class="old-price"><del>R${{$item->lost_price}}</del></span>
+                                        <span class="regular-price">R$ {{number_format($item->price, 2, ',', '.')}}</span>
+                                        <span class="old-price"><del>R$ {{number_format($item->cost_price, 2, ',', '.')}}</del></span>
                                     </div>
                                     <div class="cart">
                                         <div class="add-to-cart">
@@ -135,7 +135,7 @@
                 </div>
                 <div class="banner-area">
                     <div class="single-banner mt-30 text-center">
-                        <a href="index-2.html#"><img src="assets/site/images/banner/banner2-4.png" alt=""
+                        <a href="{{route('site.index')}}#"><img src="assets/site/images/banner/banner2-4.png" alt=""
                                 class="img-fluid"></a>
                     </div>
                 </div>
@@ -159,7 +159,7 @@
                                         </div>
                                     </div>
                                     <div class="action-link">
-                                        <a class="quick-view same-link" href="index-2.html#" title="Quick view"
+                                        <a class="quick-view same-link" href="{{route('site.index')}}#" title="Quick view"
                                             data-bs-toggle="modal" data-bs-target="#modal_box"
                                             data-original-title="quick view"><i
                                                 class="zmdi zmdi-eye zmdi-hc-fw"></i></a>

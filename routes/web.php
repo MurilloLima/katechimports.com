@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('site/', [HomeController::class, 'index'])->name('site.index');
 Route::get('departamento/{slug}', [HomeController::class, 'department'])->name('site.department');
+Route::get('sobre/', [HomeController::class, 'about'])->name('site.about');
+Route::get('politica-de-privacidade/', [HomeController::class, 'privacy'])->name('site.privacy');
 
 // newsletter
 Route::get('/', [HomeController::class, 'newsletter'])->name('site.newsletter');

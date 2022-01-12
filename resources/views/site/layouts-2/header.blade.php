@@ -1,7 +1,7 @@
 <!-- =================
     Header Area Start 
     =====================-->
-<div class="header-area header-two">
+<div class="header-area header-three">
     <!-- Header Top Start -->
     {{-- <div class="header-top full-border">
         <div class="container">
@@ -35,12 +35,10 @@
                                 </a>
                                 <ul class="box-dropdown drop-dropdown">
                                     <li>
-                                        <a href="#"><img src="assets/images/cuntry/1.jpg" alt="">
-                                            English</a>
+                                        <a href="#"><img src="assets/images/cuntry/1.jpg" alt=""> English</a>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="assets/images/cuntry/2.jpg" alt="">
-                                            Francies</a>
+                                        <a href="#"><img src="assets/images/cuntry/2.jpg" alt=""> Francis</a>
                                     </li>
                                 </ul>
                             </li>
@@ -63,26 +61,39 @@
     </div> --}}
     <!-- Header Top End -->
     <!-- Header Middle Start -->
-    <div class="header-middle space-40">
+    <div class="header-middle space-40 sticker">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-3 col-6">
                     <div class="logo">
-                        <a href="{{ route('site.index') }}">
-                            <img src="{{ asset('assets/site/images/logo/logo-branca.svg') }}" alt=""
+                        <a href="{{route('site.index')}}"><img
+                                src="{{ asset('assets/site/images/logo/logo-branca.svg') }}" alt=""
                                 class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-lg-9 col-6">
                     <div class="header-middle-inner">
-                        <div class="search-container">
-                            <form action="#">
-                                <div class="search_box">
-                                    <input class="header-search" placeholder="O que você precisa hoje?" type="text">
+                        <!-- Main Menu Start -->
+                        <div class="header-menu float-left add-sticky">
+                            <div class="sticky-container">
+                                <div class="logo">
+                                    <a href="{{route('site.index')}}"><img
+                                            src="{{ asset('assets/site/images/logo/logo-dark.png') }}" width="80" alt=""
+                                            class="img-fluid"></a>
                                 </div>
-                            </form>
+                                <nav class="main-menu">
+                                    <ul>
+                                        @foreach ($menu as $item)
+                                        <li>
+                                            <a href="{{ route('site.department', ['slug'=>$item->slug]) }}"
+                                                style="text-transform: uppercase;">{{$item->name}}</a>
+                                        </li>
+                                        @endforeach
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
-                       
+                        <!-- Main Menu End -->
                         @include('site.layouts.cart')
                     </div>
                 </div>
@@ -91,7 +102,7 @@
     </div>
     <!-- Header Middle End -->
     <!-- Header Bottom Start -->
-    <div class="header-menu header-bottom-area sticker" style="background-color: #4B4B4D;">
+    <div class="header-menu header-bottom-area theme-bg">
         <div class="offcanvas_overlay"></div>
         <div class="container">
             <div class="row">
@@ -107,7 +118,6 @@
                             </div>
                         </div>
                         <nav class="categorye-menus category-dropdown">
-
                             <ul class="categories-expand">
                                 @forelse ($departments as $item)
                                 <li>
@@ -124,33 +134,19 @@
                     <!-- Category Menu End -->
                 </div>
                 <div class="col-lg-9 col-6 d-none d-lg-flex">
-                    <!-- Main Menu Start -->
-                    <div class="header-menu add-sticky">
-                        <div class="sticky-container">
-                            <div class="logo">
-                                <a href="{{ route('site.index') }}"><img
-                                        src="{{ asset('assets/site/images/logo/logo-dark.png') }}" width="80" alt=""
-                                        class="img-fluid"></a>
+                    <div class="search-container">
+                        <form action="#">
+                            <div class="search_box">
+                                <input class="header-search" placeholder="O que você precisa hoje?" type="text">
                             </div>
-                            <nav class="main-menu">
-                                <ul>
-                                    @foreach ($menu as $item)
-                                    <li>
-                                        <a href="{{ route('site.department', ['slug'=>$item->slug]) }}"
-                                            style="text-transform: uppercase;">{{$item->name}}</a>
-                                    </li>
-                                    @endforeach
-                                </ul>
-                            </nav>
-                        </div>
+                        </form>
                     </div>
-                    <!-- Main Menu End -->
                 </div>
                 <div class="col-2 d-lg-none align-self-center">
                     <!-- ========================
                         Offcanvas Menu Area Start 
                         ===========================-->
-                    <div class="offcanvas_menu offcanvas_menu_two">
+                    <div class="offcanvas_menu">
                         <div class="canvas_open">
                             <a href="#"><i class="zmdi zmdi-menu"></i></a>
                         </div>
@@ -181,13 +177,11 @@
                                         </a>
                                         <ul class="box-dropdown drop-dropdown">
                                             <li>
-                                                <a href="#"><img src="{{ asset('assets/site/images/cuntry/1.jpg') }}"
-                                                        alt="">
+                                                <a href="#"><img src="assets/images/cuntry/1.jpg" alt="">
                                                     English</a>
                                             </li>
                                             <li>
-                                                <a href="#"><img src="{{ asset('assets/site/images/cuntry/2.jpg') }}"
-                                                        alt="">
+                                                <a href="#"><img src="assets/images/cuntry/2.jpg" alt="">
                                                     Francies</a>
                                             </li>
                                         </ul>
@@ -218,8 +212,8 @@
                                     <li class="menu-item-has-children active">
                                         <a href="#">Home</a>
                                         <ul class="sub-menu">
-                                            <li><a href="{{ route('site.index') }}">Home 1</a></li>
-                                            <li><a href="">Home 2</a></li>
+                                            <li><a href="{{route('site.index')}}">Home 1</a></li>
+                                            <li><a href="index-2.html">Home 2</a></li>
                                             <li><a href="index-3.html">Home 3</a></li>
                                             <li><a href="index-4.html">Home 4</a></li>
                                         </ul>
@@ -316,7 +310,7 @@
                                     <li class="menu-item-has-children">
                                         <a href="#">pages </a>
                                         <ul class="sub-menu">
-                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="">About Us</a></li>
                                             <li><a href="shop.html">Shop</a></li>
                                             <li><a href="product-details.html">Product</a></li>
                                             <li><a href="shopping-cart.html">Shopping Cart</a></li>
@@ -332,7 +326,7 @@
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="about.html">about Us</a>
+                                        <a href="">about Us</a>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="contact.html"> Contact Us</a>
@@ -346,8 +340,10 @@
                                 <div class="footer_social">
                                     <ul class="d-flex">
                                         <li><a class="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                        <li><a class="twitter" href="#"><i class="zmdi zmdi-twitter"></i></a></li>
-                                        <li><a class="youtube" href="#"><i class="zmdi zmdi-youtube"></i></a></li>
+                                        <li><a class="twitter" href="#"><i class="zmdi zmdi-twitter"></i></a>
+                                        </li>
+                                        <li><a class="youtube" href="#"><i class="zmdi zmdi-youtube"></i></a>
+                                        </li>
                                         <li><a class="google" href="#"><i class="zmdi zmdi-google-plus"></i></a></li>
                                         <li><a class="linkedin" href="#"><i class="zmdi zmdi-linkedin"></i></a></li>
                                     </ul>
@@ -365,5 +361,5 @@
     <!-- Header Bottom End  -->
 </div>
 <!-- =================
-    Header Area End 
+    Header Area  End 
     =====================-->
