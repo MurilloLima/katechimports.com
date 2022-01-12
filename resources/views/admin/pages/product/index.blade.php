@@ -36,6 +36,8 @@
                                         <th>IMAGE</th>
                                         <th>PRODUTO</th>
                                         <th>VALOR</th>
+                                        <th>DEPARTAMENTO</th>
+                                        <th>GALERIA</th>
                                         <th>STATUS</th>
                                         <th>DATA CADASTRO</th>
                                         <th>#</th>
@@ -45,10 +47,13 @@
                                     @forelse ($data as $item)
                                     <tr>
                                         <td>
-                                            <img src="{{ url("storage/products/{$item->image_url}") }}" width="100" alt="">
+                                            <img src="{{ url("storage/products/{$item->image_url}") }}" width="100"
+                                            alt="">
                                         </td>
                                         <td>{{$item->name}}</td>
                                         <td>{{number_format($item->price, 2, ',', '.')}}</td>
+                                        <td>{{$item->department->name}}</td>
+                                        <td><a href="{{ route('product.galery.index', ['id'=>$item->id]) }}">Fotos({{count($item->galeries)}})</a></td>
                                         <td>{{$item->status}}</td>
                                         <td>{{date('d/m/Y', strtotime($item->created_at))}}</td>
                                         <td>
@@ -60,7 +65,7 @@
                                     </tr>
                                     @empty
                                     <tr>
-                                        <td colspan="6" class="text-center">Nenhum registro encontrado.</td>
+                                        <td colspan="8" class="text-center">Nenhum registro encontrado.</td>
                                     </tr>
                                     @endforelse
                                 </tbody>

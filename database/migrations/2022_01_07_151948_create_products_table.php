@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->decimal('price', 10, 2);
             $table->decimal('cost_price', 10, 2)->nullable();
             $table->text('descryption')->nullable();
+            $table->text('datasheet')->nullable();
             $table->string('image_url')->default('default.png');
             $table->string('status')->default('Ativo');
             $table->integer('department_id');

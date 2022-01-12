@@ -1,4 +1,4 @@
-@extends('site.layouts-2.app')
+@extends('site.layouts.app')
 @section('title', 'Política de Privacidade')
 
 @section('content')

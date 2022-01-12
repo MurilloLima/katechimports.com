@@ -29,6 +29,13 @@ class HomeController extends Controller
         return view('site.index', compact('sliders', 'products1', 'products2', 'departmentFooter'));
     }
 
+    public function product_details($slug)
+    {
+        $data = $this->product->where('slug', $slug)->first();
+        $related = $this->product->where('department_id', $data->department_id)->get();
+        return view('site.pages.product-details', compact('data', 'related'));
+    }
+
     public function newsletter()
     {
         return view('site.pages.newsletter');

@@ -55,8 +55,17 @@
     <div class="col-md-12">
         <div class="form-group">
             <label for="">DESCRIÇÃO</label>
-            <textarea name="descryption" class="form-control" cols="30"
+            <textarea name="descryption" class="form-control" cols="30" id="edit"
                 rows="10">{{$data->descryption ?? old('descryption')}}</textarea>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="">Ficha Técnica</label>
+            <textarea name="datasheet" id="edit2" class="form-control" cols="30"
+                rows="10">{{$data->datasheet ?? old('datasheet')}}</textarea>
         </div>
     </div>
 </div>

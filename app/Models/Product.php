@@ -12,8 +12,19 @@ class Product extends Model
         'price',
         'cost_price',
         'descryption',
+        'datasheet',
         'image_url',
         'status',
         'slug'
     ];
+
+    public function department()
+    {
+        return $this->belongsTo(Departments::class);
+    }
+
+    public function galeries()
+    {
+        return $this->hasMany(Galery::class);
+    }
 }

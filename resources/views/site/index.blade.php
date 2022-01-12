@@ -83,7 +83,7 @@
                             <!-- Single-Product-Start -->
                             <div class="item-product">
                                 <div class="product-thumb">
-                                    <a href="product-details.html">
+                                    <a href="{{ route('site.product-details', ['slug'=>$item->slug]) }}">
                                         <img src="{{ url('storage/products/', $item->image_url) }}" alt=""
                                             class="img-fluid">
                                     </a>
@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="product-caption">
                                     <div class="product-name">
-                                        <a href="product-details.html">{{$item->name}} - {{$item->id}}</a>
+                                        <a href="{{ route('site.product-details', ['slug'=>$item->slug]) }}">{{$item->name}} - {{$item->id}}</a>
                                     </div>
                                     <div class="rating">
                                         <span class="yellow"><i class="fa fa-star"></i></span>
@@ -121,7 +121,7 @@
                                     </div>
                                     <div class="cart">
                                         <div class="add-to-cart">
-                                            <a href="shopping-cart.html" title="Add to cart"><i
+                                            <a href="#" title="Adicionar"><i
                                                     class="zmdi zmdi-shopping-cart-plus zmdi-hc-fw"></i></a>
                                         </div>
                                     </div>

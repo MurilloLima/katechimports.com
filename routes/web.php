@@ -11,6 +11,7 @@ Route::get('site/', [HomeController::class, 'index'])->name('site.index');
 Route::get('departamento/{slug}', [HomeController::class, 'department'])->name('site.department');
 Route::get('sobre/', [HomeController::class, 'about'])->name('site.about');
 Route::get('politica-de-privacidade/', [HomeController::class, 'privacy'])->name('site.privacy');
+Route::get('produto/{slug}', [HomeController::class, 'product_details'])->name('site.product-details');
 
 // newsletter
 Route::get('/', [HomeController::class, 'newsletter'])->name('site.newsletter');
@@ -37,6 +38,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('product/delete/{id}', 'Admin\ProductController@destroy')->name('product.delete');
     Route::get('product/relatorios/', 'Admin\ProductController@report')->name('product.report');
     Route::get('product/search/', 'Admin\ProductController@search')->name('product.search');
+
+    //products
+    Route::get('galery/{product_id}', 'Admin\GaleryController@index')->name('product.galery.index');
+    Route::get('galery/create/', 'Admin\GaleryController@create')->name('product.galery.create');
+    Route::post('galery/store/', 'Admin\GaleryController@store')->name('product.galery.store');
+    Route::get('galery/delete/{id}', 'Admin\GaleryController@destroy')->name('product.galery.delete');
 
     // departments
     Route::get('departments/', 'Admin\DepartmentController@index')->name('department.index');

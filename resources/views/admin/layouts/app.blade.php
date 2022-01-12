@@ -177,8 +177,25 @@
             value.classList.add(cnpj);
         }
   </script>
-
-
+  <script src="{{ asset('assets/admin/tinymce/js/tinymce/tinymce.min.js') }}"></script>
+  <script>
+    tinymce.init({
+      selector:'textarea#edit',
+      language: 'pt_BR',
+      height: 300,
+      plugins: 'table',
+      toolbar: 'table tabledelete | tableprops tablerowprops tablecellprops | tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol'
+    });
+  </script>
+  <script>
+    tinymce.init({
+    selector:'textarea#edit2',
+    language: 'pt_BR',
+    height: 300,
+    plugins: 'table',
+    toolbar: 'table tabledelete | tableprops tablerowprops tablecellprops | tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol'
+  });
+  </script>
 </body>
 
 </html>
