@@ -37,8 +37,7 @@
                     @foreach ($data->galeries as $item)
                     <div class="product-item">
                         <a href="{{ asset('storage/products/' . $item->image) }}">
-                            <img src="{{ asset('storage/products/' . $item->image) }}"
-                                class="img-fluid" alt="" /></a>
+                            <img src="{{ asset('storage/products/' . $item->image) }}" class="img-fluid" alt="" /></a>
                     </div>
                     @endforeach
                 </div>
@@ -47,7 +46,7 @@
                 <div class="product-details-thumbnail arrow-center text-center">
                     @foreach ($data->galeries as $item)
                     <div class="product-item-thumb">
-                        <img src="{{ asset('storage/products/' . $item->image) }}"
+                        <img src="{{ asset('storage/products/' . $item->image) }}" width="100" height="100"
                             class="img-fluid" alt="" />
                     </div>
                     @endforeach
@@ -78,7 +77,7 @@
                         </ul> --}}
                     </div>
                     <div class="price-box">
-                        <span class="regular-price"></span>
+                        <span class="regular-price">{{number_format($data->price, 2, ',', '.')}}</span>
                     </div>
                     <div class="product-description">
                         <p>{!!str_limit($data->descryption, 300)!!}</p>
@@ -105,7 +104,7 @@
                             {{-- <a class="quick-view same-link" href="product-details-bottomtab.html#"
                                 title="Quick view" data-bs-toggle="modal" data-bs-target="#modal_box"
                                 data-original-title="quick view"><i class="zmdi zmdi-eye zmdi-hc-fw"></i></a> --}}
-                            <button class="btn-secondary">Adicionar</button>
+                            <button class="btn-secondary">Comprar</button>
                             {{-- <a class="wishlist-add same-link" href="wishlist.html" title="Add to wishlist"><i
                                     class="zmdi zmdi-favorite-outline zmdi-hc-fw"></i></a> --}}
                         </div>
@@ -328,8 +327,10 @@
                                     </div>
                                     <div class="cart">
                                         <div class="add-to-cart">
-                                            <a class="cart-plus" href="" title="Adicionar"><i
+                                            <a href="#" title="Adicionar ao carrinho"><i
                                                     class="zmdi zmdi-shopping-cart-plus zmdi-hc-fw"></i></a>
+                                            <a href="#" title="Comprar agora"><i
+                                                    class="zmdi zmdi-shopping-cart"></i></a>
                                         </div>
                                     </div>
                                 </div>

@@ -3322,13 +3322,13 @@ ul.category-mega li.cat-mega-title ul li:hover a {
   transition: 0.3s;
 }
 
-.cart:hover a {
+.cart a:hover  {
   background: #4B4B4D;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.cart:hover a i {
+.cart a i:hover {
   color: #FFFFFF;
   -webkit-transition: 0.3s;
   transition: 0.3s;

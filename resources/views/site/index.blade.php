@@ -43,20 +43,20 @@
         <div class="row">
             <div class="col-lg-4 col-md-4 col-12 text-center">
                 <div class="single-banner mt-30">
-                    <a href="{{route('site.index')}}#"><img src="{{ asset('assets/site/images/banner/banner1-1.png') }}" alt=""
-                            class="img-fluid"></a>
+                    <a href="{{route('site.index')}}#"><img src="{{ asset('assets/site/images/banner/banner1-1.png') }}"
+                            alt="" class="img-fluid"></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-12 text-center">
                 <div class="single-banner mt-30">
-                    <a href="{{route('site.index')}}#"><img src="{{ asset('assets/site/images/banner/banner2-2.png') }}" alt=""
-                            class="img-fluid"></a>
+                    <a href="{{route('site.index')}}#"><img src="{{ asset('assets/site/images/banner/banner2-2.png') }}"
+                            alt="" class="img-fluid"></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-12 text-center">
                 <div class="single-banner mt-30">
-                    <a href="{{route('site.index')}}#"><img src="{{ asset('assets/site/images/banner/banner3-3.png') }}" alt=""
-                            class="img-fluid"></a>
+                    <a href="{{route('site.index')}}#"><img src="{{ asset('assets/site/images/banner/banner3-3.png') }}"
+                            alt="" class="img-fluid"></a>
                 </div>
             </div>
         </div>
@@ -93,8 +93,8 @@
                                         </div>
                                     </div>
                                     {{-- <div class="action-link">
-                                        <a class="quick-view same-link" href="{{route('site.index')}}#" title="Quick view"
-                                            data-bs-toggle="modal" data-bs-target="#modal_box"
+                                        <a class="quick-view same-link" href="{{route('site.index')}}#"
+                                            title="Quick view" data-bs-toggle="modal" data-bs-target="#modal_box"
                                             data-original-title="quick view"><i
                                                 class="zmdi zmdi-eye zmdi-hc-fw"></i></a>
                                         <a class="compare-add same-link" href="compare.html" title="Add to compare"><i
@@ -106,7 +106,8 @@
                                 </div>
                                 <div class="product-caption">
                                     <div class="product-name">
-                                        <a href="{{ route('site.product-details', ['slug'=>$item->slug]) }}">{{$item->name}} - {{$item->id}}</a>
+                                        <a href="{{ route('site.product-details', ['slug'=>$item->slug]) }}">{{$item->name}}
+                                            - {{$item->id}}</a>
                                     </div>
                                     <div class="rating">
                                         <span class="yellow"><i class="fa fa-star"></i></span>
@@ -116,13 +117,17 @@
                                         <span class="yellow"><i class="fa fa-star"></i></span>
                                     </div>
                                     <div class="price-box">
-                                        <span class="regular-price">R$ {{number_format($item->price, 2, ',', '.')}}</span>
-                                        <span class="old-price"><del>R$ {{number_format($item->cost_price, 2, ',', '.')}}</del></span>
+                                        <span class="regular-price">R$ {{number_format($item->price, 2, ',',
+                                            '.')}}</span>
+                                        <span class="old-price"><del>R$ {{number_format($item->cost_price, 2, ',',
+                                                '.')}}</del></span>
                                     </div>
                                     <div class="cart">
                                         <div class="add-to-cart">
-                                            <a href="#" title="Adicionar"><i
+                                            <a href="#" title="Adicionar ao carrinho"><i
                                                     class="zmdi zmdi-shopping-cart-plus zmdi-hc-fw"></i></a>
+                                            <a href="#" title="Comprar agora"><i
+                                                    class="zmdi zmdi-shopping-cart"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -159,8 +164,8 @@
                                         </div>
                                     </div>
                                     <div class="action-link">
-                                        <a class="quick-view same-link" href="{{route('site.index')}}#" title="Quick view"
-                                            data-bs-toggle="modal" data-bs-target="#modal_box"
+                                        <a class="quick-view same-link" href="{{route('site.index')}}#"
+                                            title="Quick view" data-bs-toggle="modal" data-bs-target="#modal_box"
                                             data-original-title="quick view"><i
                                                 class="zmdi zmdi-eye zmdi-hc-fw"></i></a>
                                         <a class="compare-add same-link" href="compare.html" title="Add to compare"><i

@@ -55,6 +55,13 @@ class HomeController extends Controller
     {
     }
 
+    public function department($slug)
+    {
+        $department = $this->department->where('slug', $slug)->first();
+        $data = $department->products()->paginate(1);
+        return view('site.pages.department', compact('data', 'department'));
+    }
+
     public function send(Request $request)
     {
         //contatokatechimports@gmail.com

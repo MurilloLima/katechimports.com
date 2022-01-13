@@ -1,5 +1,5 @@
 @extends('site.layouts.app')
-@section('title', 'Contatos')
+@section('title', 'Checkout')
 
 @section('content')
 
