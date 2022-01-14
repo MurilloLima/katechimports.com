@@ -103,7 +103,7 @@
                                 <div class="footer_menu">
                                     <ul>
                                         @foreach ($menu as $item)
-                                        <li style="text-transform: capitalize;"><a href="#">{{$item->name}}</a></li>
+                                        <li><a href="#">{{$item->name}}</a></li>
                                         @endforeach
                                     </ul>
                                 </div>

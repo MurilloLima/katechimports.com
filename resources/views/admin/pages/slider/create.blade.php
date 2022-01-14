@@ -1,4 +1,4 @@
-@extends('admin.layouts.app',['activePage' => 'product.index'])
+@extends('admin.layouts.app',['activePage' => 'slider.index'])
 @section('title', 'Cadastrar')
 @section('content')
 <div class="content-wrapper">

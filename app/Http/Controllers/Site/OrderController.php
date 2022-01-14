@@ -63,8 +63,8 @@ class OrderController extends Controller
         $data .= "Total: R$" . number_format($order_items->sum('price'), 2, ',', '.');
 
         $request->session()->forget('token');
-        
-        return redirect()->to("https://api.whatsapp.com/send?phone=5599991106799" . "&text=" . $data);
+
+        return redirect()->to("https://api.whatsapp.com/send?phone=559998202-3038" . "&text=" . $data);
     }
 
     public function checkoutFirst($product_id)
@@ -74,7 +74,7 @@ class OrderController extends Controller
         $data .= $order->name . "%0a%0a";
         $data .= "Valor: R$" . number_format($order->sum('price'), 2, ',', '.');
 
-        return redirect()->to("https://api.whatsapp.com/send?phone=5599991106799" . "&text=" . $data);
+        return redirect()->to("https://api.whatsapp.com/send?phone=559998202-3038" . "&text=" . $data);
         # code...
     }
 }

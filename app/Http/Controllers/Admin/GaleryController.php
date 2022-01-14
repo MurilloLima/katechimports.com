@@ -76,6 +76,7 @@ class GaleryController extends Controller
     public function destroy($id)
     {
         $this->galery->destroy($id);
+        alert()->success('Sucesso', 'Image deletada!');
         return redirect()->back()->with('success', 'Deletado com sucesso!');
     }
 }

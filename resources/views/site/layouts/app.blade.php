@@ -51,6 +51,8 @@
 
 
 <body>
+  @include('sweetalert::alert')
+
   <div id="loader"></div>
   @include('site.layouts.header')
   @yield('content')

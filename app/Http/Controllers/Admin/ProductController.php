@@ -131,6 +131,7 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $this->product->destroy($id);
+        alert()->success('Sucesso', 'Producto deletada!');
         return redirect()->back()->with('success', 'Deletado com sucesso!');
     }
 }

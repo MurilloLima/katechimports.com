@@ -110,6 +110,7 @@ class DepartmentController extends Controller
     public function destroy($id)
     {
         $this->department->destroy($id);
+        alert()->success('Sucesso', 'Departamento deletado!');
         return redirect()->back()->with('success', 'Deletado com sucesso!');
     }
 }

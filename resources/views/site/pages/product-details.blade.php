@@ -100,11 +100,11 @@
                         </table>
                     </div>
                     <div class="product-buttons grid_list">
-                        <div class="action-link">
+                        <div class="cart-list-button">
                             {{-- <a class="quick-view same-link" href="product-details-bottomtab.html#"
                                 title="Quick view" data-bs-toggle="modal" data-bs-target="#modal_box"
                                 data-original-title="quick view"><i class="zmdi zmdi-eye zmdi-hc-fw"></i></a> --}}
-                            <button class="btn-secondary">Comprar</button>
+                            <a href="{{ route('checkout.first', ['product_id'=>$data->id]) }}" class="cart-btn btn-secondary">Comprar agora</a>
                             {{-- <a class="wishlist-add same-link" href="wishlist.html" title="Add to wishlist"><i
                                     class="zmdi zmdi-favorite-outline zmdi-hc-fw"></i></a> --}}
                         </div>
@@ -327,10 +327,11 @@
                                     </div>
                                     <div class="cart">
                                         <div class="add-to-cart">
-                                            <a href="#" title="Adicionar ao carrinho"><i
+                                            <a href="{{ route('add.product.cart', ['product_id'=>$item->id]) }}"
+                                                title="Adicionar ao carrinho"><i
                                                     class="zmdi zmdi-shopping-cart-plus zmdi-hc-fw"></i></a>
-                                            <a href="#" title="Comprar agora"><i
-                                                    class="zmdi zmdi-shopping-cart"></i></a>
+                                            <a href="{{ route('checkout.first', ['product_id'=>$item->id]) }}"
+                                                title="Comprar agora"><i class="zmdi zmdi-shopping-cart"></i></a>
                                         </div>
                                     </div>
                                 </div>

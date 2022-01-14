@@ -123,6 +123,7 @@ class SliderController extends Controller
     public function destroy($id)
     {
         $this->slider->destroy($id);
+        alert()->success('Sucesso', 'Slider deletada!');
         return redirect()->back()->with('success', 'Deletado com sucesso!');
     }
 }

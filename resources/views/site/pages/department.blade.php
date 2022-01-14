@@ -32,7 +32,7 @@
                         <ul class="sidebar-category-expand">
                             @foreach ($menu as $item)
                             <li class="menu-item-has-children">
-                                <a href="{{ route('site.department', ['slug'=>$data->slug]) }}">{{$data->name}}</a>
+                                <a href="{{ route('site.department', ['slug'=>$item->slug]) }}">{{$item->name}}</a>
                             </li>
                             @endforeach
                         </ul>
@@ -142,7 +142,7 @@
                                             class="zmdi zmdi-favorite-outline zmdi-hc-fw"></i></a>
                                 </div> --}}
                                 <div class="cart-list-button">
-                                    <a href="#" class="cart-btn">Comprar agora</a>
+                                    <a href="{{ route('checkout.first', ['product_id'=>$item->id]) }}" class="cart-btn">Comprar agora</a>
                                 </div>
                             </div>
                         </div>

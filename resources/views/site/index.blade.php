@@ -3,7 +3,6 @@
 
 @section('content')
 
-@include('sweetalert::alert')
 <!--=====================
     slider area start
     =========================-->
@@ -194,8 +193,11 @@
                                     </div>
                                     <div class="cart">
                                         <div class="add-to-cart">
-                                            <a class="cart-plus" href="#" title="Add to cart"><i
+                                            <a href="{{ route('add.product.cart', ['product_id'=>$item->id]) }}"
+                                                title="Adicionar ao carrinho"><i
                                                     class="zmdi zmdi-shopping-cart-plus zmdi-hc-fw"></i></a>
+                                            <a href="{{ route('checkout.first', ['product_id'=>$item->id]) }}"
+                                                title="Comprar agora"><i class="zmdi zmdi-shopping-cart"></i></a>
                                         </div>
                                     </div>
                                 </div>

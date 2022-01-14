@@ -15,7 +15,7 @@ class Departments extends Model
 
     public function sliders()
     {
-        return $this->hasMany(Slider::class);
+        return $this->hasMany(Slider::class, 'department_id');
     }
 
     public static function boot()

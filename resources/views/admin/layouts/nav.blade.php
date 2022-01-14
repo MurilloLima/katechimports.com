@@ -87,7 +87,7 @@
                         class="nav-link {{ $activePage == 'order.index' ? ' active' : '' }}">
                         <i class="nav-icon fas fa-tasks"></i>
                         <p>
-                            Pedidos
+                            Publicidades
                         </p>
                     </a>
                 </li>
