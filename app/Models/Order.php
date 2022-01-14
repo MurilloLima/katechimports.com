@@ -11,6 +11,7 @@ class Order extends Model
     protected $fillable = [
         'token',
         'product_id',
+        'name',
         'qtd',
         'price'
     ];

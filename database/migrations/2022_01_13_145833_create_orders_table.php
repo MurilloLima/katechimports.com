@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->string('token');
             $table->integer('product_id');
+            $table->string('name');
             $table->integer('qtd');
             $table->decimal('price', 10, 2);
             $table->timestamps();
