@@ -58,7 +58,7 @@ class HomeController extends Controller
     public function department($slug)
     {
         $department = $this->department->where('slug', $slug)->first();
-        $data = $department->products()->paginate(1);
+        $data = $department->products()->paginate(12);
         return view('site.pages.department', compact('data', 'department'));
     }
 
@@ -79,4 +79,5 @@ class HomeController extends Controller
         Mail::to('contatokatechimports@gmail.com')->send(new SendEmailNewsLetter($details));
         return redirect()->back()->with('success', 'Recebemos sua solicitação!');
     }
+
 }

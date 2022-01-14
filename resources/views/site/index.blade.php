@@ -2,6 +2,8 @@
 @section('title', 'Home')
 
 @section('content')
+
+@include('sweetalert::alert')
 <!--=====================
     slider area start
     =========================-->
@@ -78,13 +80,13 @@
                         <h6>Laçamentos</h6>
                     </div>
                     <div class="product-carousel-home2 slick-custom slick-custom-default nav-top">
-                        @foreach ($products1 as $item)
+                        @foreach ($products1 as $product)
                         <div class="product-row">
                             <!-- Single-Product-Start -->
                             <div class="item-product">
                                 <div class="product-thumb">
-                                    <a href="{{ route('site.product-details', ['slug'=>$item->slug]) }}">
-                                        <img src="{{ url('storage/products/', $item->image_url) }}" alt=""
+                                    <a href="{{ route('site.product-details', ['slug'=>$product->slug]) }}">
+                                        <img src="{{ url('storage/products/', $product->image_url) }}" alt=""
                                             class="img-fluid">
                                     </a>
                                     <div class="box-label">
@@ -106,8 +108,8 @@
                                 </div>
                                 <div class="product-caption">
                                     <div class="product-name">
-                                        <a href="{{ route('site.product-details', ['slug'=>$item->slug]) }}">{{$item->name}}
-                                            - {{$item->id}}</a>
+                                        <a href="{{ route('site.product-details', ['slug'=>$product->slug]) }}">{{$product->name}}
+                                            - {{$product->id}}</a>
                                     </div>
                                     <div class="rating">
                                         <span class="yellow"><i class="fa fa-star"></i></span>
@@ -117,14 +119,15 @@
                                         <span class="yellow"><i class="fa fa-star"></i></span>
                                     </div>
                                     <div class="price-box">
-                                        <span class="regular-price">R$ {{number_format($item->price, 2, ',',
-                                            '.')}}</span>
-                                        <span class="old-price"><del>R$ {{number_format($item->cost_price, 2, ',',
+                                        <span class="regular-price">R$ {{number_format($product->price, 2,
+                                            ',','.')}}</span>
+                                        <span class="old-price"><del>R$ {{number_format($product->cost_price, 2, ',',
                                                 '.')}}</del></span>
                                     </div>
                                     <div class="cart">
                                         <div class="add-to-cart">
-                                            <a href="#" title="Adicionar ao carrinho"><i
+                                            <a href="{{ route('add.product.cart', ['product_id'=>$product->id]) }}"
+                                                title="Adicionar ao carrinho"><i
                                                     class="zmdi zmdi-shopping-cart-plus zmdi-hc-fw"></i></a>
                                             <a href="#" title="Comprar agora"><i
                                                     class="zmdi zmdi-shopping-cart"></i></a>

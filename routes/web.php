@@ -2,20 +2,21 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Site\{
-    HomeController
-};
 use Illuminate\Support\Facades\Auth;
 
-Route::get('site/', [HomeController::class, 'index'])->name('site.index');
-Route::get('departamento/{slug}', [HomeController::class, 'department'])->name('site.department');
-Route::get('sobre/', [HomeController::class, 'about'])->name('site.about');
-Route::get('politica-de-privacidade/', [HomeController::class, 'privacy'])->name('site.privacy');
-Route::get('produto/{slug}', [HomeController::class, 'product_details'])->name('site.product-details');
+Route::get('site/', 'Site\HomeController@index')->name('site.index');
+Route::get('departamento/{slug}', 'Site\HomeController@department')->name('site.department');
+Route::get('sobre/', 'Site\HomeController@about')->name('site.about');
+Route::get('politica-de-privacidade/', 'Site\HomeController@privacy')->name('site.privacy');
+Route::get('produto/{slug}', 'Site\HomeController@product_details')->name('site.product-details');
+
+//add item cart
+Route::get('add/product/cart/{product_id}', 'Site\OrderController@addItem')->name('add.product.cart');
+Route::get('delete/product/cart/{product_id}', 'Site\OrderController@deleteItem')->name('delete.product.cart');
 
 // newsletter
-Route::get('/', [HomeController::class, 'newsletter'])->name('site.newsletter');
-Route::get('send/', [HomeController::class, 'send'])->name('site.send');
+Route::get('/', 'Site\HomeController@newsletter')->name('site.newsletter');
+Route::get('send/', 'Site\HomeController@send')->name('site.send');
 
 //administrativo
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {

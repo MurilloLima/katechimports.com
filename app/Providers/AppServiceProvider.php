@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Models\Departments;
+use App\Models\Order;
+use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="cart">
                                     <div class="add-to-cart">
-                                        <a href="#" title="Adicionar ao carrinho"><i
+                                        <a href="{{ route('add.product.cart', ['product_id'=>$item->id]) }}" title="Adicionar ao carrinho"><i
                                                 class="zmdi zmdi-shopping-cart-plus zmdi-hc-fw"></i></a>
                                         <a href="#" title="Comprar agora"><i class="zmdi zmdi-shopping-cart"></i></a>
                                     </div>

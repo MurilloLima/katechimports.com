@@ -10,58 +10,39 @@
 <a href="">
     <img src="{{ asset('assets/site/images/icon/love.svg') }}" alt="" class="img-fluid">
 </a> --}}
+
 <div class="blockcart">
     <a href="#" class="drop-toggle">
         <img src="{{ asset('assets/site/images/cart/cart.svg') }}" alt="" class="img-fluid">
-        <span class="count">2</span>
+        <span class="count">{{App\Models\Order::order()->sum('qtd')}}</span>
     </a>
     <div class="cart-dropdown drop-dropdown">
         <ul>
+            @forelse (App\Models\Order::order() as $item)
             <li class="mini-cart-details">
                 <div class="innr-crt-img">
-                    <img src="{{ asset('assets/site/images/cart/ear-headphones.jpg') }}" alt="">
-                    <span>1x</span>
+                    <img src="{{ url('storage/products/', $item->product->image_url) }}" alt="" width="80">
+                    <span><a href="{{ route('delete.product.cart', ['id'=>$item->id]) }}"><i class="fa fa-remove"></i></a></span>
                 </div>
                 <div class="innr-crt-content">
                     <span class="product-name">
-                        <a href="#">SonicFuel Wireless Over-Ear Headphones </a>
+                        <a href="#">{{$item->product->name}}</a>
                     </span>
-                    <span class="product-price">$32.30</span>
-                    <span class="product-size">Size: S</span>
+                    <span class="product-price">R$ {{number_format($item->product->price, 2, ',','.')}}</span>
+                    {{-- <span class="product-size">Size: S</span> --}}
                 </div>
             </li>
-            <li class="mini-cart-details mb-30">
-                <div class="innr-crt-img">
-                    <img src="assets/site/images/cart/720-degree-cameras-dual.jpg" alt="">
-                    <span>1x</span>
-                </div>z
-                <div class="innr-crt-content">
-                    <span class="product-name">
-                        <a href="#">720 Degree Panoramic HD 360.. </a>
-                    </span>
-                    <span class="product-price">$29.00</span>
-                    <span class="product-size">Dimension: 40cm X 60cm</span>
-                </div>
-            </li>
-            <li>
-                <span class="subtotal-text">Subtotal</span>
-                <span class="subtotal-price">$61.30</span>
-            </li>
-            <li>
-                <span class="subtotal-text">Shipping</span>
-                <span class="subtotal-price">$40.20</span>
-            </li>
-            <li>
-                <span class="subtotal-text">Taxes</span>
-                <span class="subtotal-price">$10.07</span>
-            </li>
+            @empty
+
+            @endforelse
+           
             <li>
                 <span class="subtotal-text">Total</span>
-                <span class="subtotal-price">$111.57</span>
+                <span class="subtotal-price">R$  {{number_format(App\Models\Order::order()->sum('price'), 2, ',', '.') ?? '0'}}</span>
             </li>
         </ul>
         <div class="checkout-cart">
-            <a href="checkout.html">Checkout</a>
+            <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5599991106799">Checkout</a>
         </div>
     </div>
 </div>
