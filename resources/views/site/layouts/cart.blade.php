@@ -42,7 +42,7 @@
             </li>
         </ul>
         <div class="checkout-cart">
-            <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5599991106799">Checkout</a>
+            <a href="{{ route('checkout') }}">Checkout</a>
         </div>
     </div>
 </div>

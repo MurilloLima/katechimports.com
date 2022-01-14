@@ -129,8 +129,8 @@
                                             <a href="{{ route('add.product.cart', ['product_id'=>$product->id]) }}"
                                                 title="Adicionar ao carrinho"><i
                                                     class="zmdi zmdi-shopping-cart-plus zmdi-hc-fw"></i></a>
-                                            <a href="#" title="Comprar agora"><i
-                                                    class="zmdi zmdi-shopping-cart"></i></a>
+                                            <a href="{{ route('checkout.first', ['product_id'=>$product->id]) }}"
+                                                title="Comprar agora"><i class="zmdi zmdi-shopping-cart"></i></a>
                                         </div>
                                     </div>
                                 </div>

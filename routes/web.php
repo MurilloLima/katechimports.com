@@ -13,6 +13,8 @@ Route::get('produto/{slug}', 'Site\HomeController@product_details')->name('site.
 //add item cart
 Route::get('add/product/cart/{product_id}', 'Site\OrderController@addItem')->name('add.product.cart');
 Route::get('delete/product/cart/{product_id}', 'Site\OrderController@deleteItem')->name('delete.product.cart');
+Route::get('checkout/', 'Site\OrderController@checkout')->name('checkout');
+Route::get('checkout/{product_id}/', 'Site\OrderController@checkoutFirst')->name('checkout.first');
 
 // newsletter
 Route::get('/', 'Site\HomeController@newsletter')->name('site.newsletter');
